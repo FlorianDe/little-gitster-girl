@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import QrScanner from 'qr-scanner';
 
-import { useCameraPermission } from '../hooks/useCameraPermission';
+// import { useCameraPermission } from '../hooks/useCameraPermission';
 import QrReader, { QrReaderRef } from '../components/QrReader';
 import { useSpotifyWebPlayerContext } from '../context/SpotifyWebPlayerContext';
 import WebPlayback from '../components/WebPlayback';
@@ -15,7 +15,7 @@ import { useTranslation } from '../i18n';
 function Game() {
     const {t} = useTranslation();
     
-    const { hasPermission, requestPermission, canRequest } = useCameraPermission();
+    // const { hasPermission, requestPermission, canRequest } = useCameraPermission();
 
     const { showToast } = useToast();
     const { sdk: spotifySdk, user } = useSpotifyAuth();
@@ -138,7 +138,7 @@ function Game() {
                     <WebPlayback token={accessToken} onPlayerReady={handlePlayerReady} hidePlayer={true} />
                 </div>
             )}
-            {hasPermission === false && (
+            {/* {hasPermission === false && (
                 <div>
                     <h2>{t("cameraPermissionDenied")}</h2>
                     {!canRequest && <p>{t("cameraPermissionUserManualChangeAdvice")}</p>}
@@ -149,7 +149,7 @@ function Game() {
                     {t("requestCameraPermission")}
                 </button>
             )}
-            {hasPermission && (
+            {hasPermission && ( */}
                 <div className="game-main-section">
                     <div className="qr-reader-container">
                         <QrReader
@@ -171,7 +171,7 @@ function Game() {
                         <button onClick={scanNextSong}>{t("scanNextSong")}</button>
                     </div>
                 </div>
-            )}
+            {/* )} */}
         </div>
     );
 }
