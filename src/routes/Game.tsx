@@ -56,6 +56,7 @@ function Game() {
     };
 
     const scanNextSong = () => {
+        player?.activateElement();
         qrCodeReader.current?.start(() => setQrScanningStarted(true));
     };
 
