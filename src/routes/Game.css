@@ -1,0 +1,98 @@
+.game {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.request-permissions-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.request-permissions-btn:hover {
+    background-color: var(--button-color-hover);
+    transform: translateY(-2px);
+}
+
+/* .game-main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.game-main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-reader-container {
+    position: relative;
+    
+    /* width: 200px;
+    height: 200px; */
+}
+
+.qr-reader-container > div {
+    /* width: 100%; */
+    /* height: 100%; */
+}
+.play-pause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    height: 74px;
+    width: 74px;
+    
+    border-color: transparent transparent transparent var(--accent-color);
+    transition: 100ms all ease;
+    will-change: border-width;
+    cursor: pointer;
+}
+
+.play-pause-btn.playing{
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+}
+
+.play-pause-btn.paused{
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+
+.game-main-section__next-song-btn {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.game-main-section__next-song-btn button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-main-section__next-song-btn button:hover {
+    background-color: var(--button-color-hover);
+}
