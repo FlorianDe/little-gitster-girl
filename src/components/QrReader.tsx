@@ -21,6 +21,7 @@ HTMLCanvasElement.prototype.getContext = function (
 
 export type QrReaderRef = {
     start: (onSuccessCb?: () => void, onErrorCb?: (e: Error) => void) => void;
+    pause: () => void;
     stop: () => void;
 };
 
@@ -62,6 +63,14 @@ const QrReader = forwardRef<QrReaderRef, QrReaderProps>((props, ref) => {
             });
     };
 
+    const pause = () => {
+        try {
+            scanner?.current?.pause();
+        } catch (e) {
+            console.error('Somehow wasnt able to pause the qr code scanner!');
+        }
+    };
+
     const stop = () => {
         try {
             scanner?.current?.stop();
@@ -70,8 +79,10 @@ const QrReader = forwardRef<QrReaderRef, QrReaderProps>((props, ref) => {
         }
     };
 
+
     useImperativeHandle(ref, () => ({
         start,
+        pause,
         stop,
     }));
 

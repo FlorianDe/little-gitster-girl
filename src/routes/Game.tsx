@@ -81,7 +81,8 @@ function Game() {
                     //device_id: string, context_uri?: string, uris?: string[], offset?: object, positionMs?: number
                     const device_id = deviceId as string; //hack try to not set device id...
                     const uris = [result.data];
-                    qrCodeReader.current?.stop();
+                    qrCodeReader.current?.pause();
+                    
                     setQrScanningStarted(false); //TODO: refactor!!
 
                     try {
