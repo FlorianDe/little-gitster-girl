@@ -6,6 +6,20 @@
     align-items: center;
 }
 
+.device-selector {
+    margin: 10px 0;
+}
+
+#device-select {
+    color: var(--text-color);
+    background-color: rgba(0,0,0,0.05);
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    max-width: 100%;
+}
+
 .request-permissions-btn {
     padding: 12px 24px;
     font-size: 16px;

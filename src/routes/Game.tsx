@@ -11,6 +11,7 @@ import { isSpotifyError } from '../services/spotify-helper';
 
 import './Game.css';
 import { useTranslation } from '../i18n';
+import { Device, PlaybackState, SpotifyApi } from '@spotify/web-api-ts-sdk';
 
 function Game() {
     const {t} = useTranslation();
@@ -22,8 +23,36 @@ function Game() {
     const { deviceId, player, isPaused } = useSpotifyWebPlayerContext();
     const [qrScanningStarted, setQrScanningStarted] = useState<boolean>(false);
     const [accessToken, setAccessToken] = useState<string | undefined>(undefined);
+    const [devices, setDevices] = useState<Device[]>([]);
+    const [selectedDeviceId, setSelectedDeviceId] = useState<string | null>(null);
+
     const qrCodeReader = useRef<QrReaderRef>(null);
 
+    const fetchDevices = async () => {
+        if(spotifySdk){
+            try {
+                const result = await spotifySdk.player.getAvailableDevices();
+                setDevices(result.devices);
+            } catch (error) {
+                console.error("Error fetching devices:", error);
+            }
+        }
+    };
+
+    const handleDropdownOpen = () => {
+        fetchDevices();
+    };
+    const handleDeviceSelect = async (deviceId: string) => {
+        if (spotifySdk) {
+            try {
+                setSelectedDeviceId(deviceId);
+                await spotifySdk.player.transferPlayback([deviceId], false);
+            } catch (error) {
+                console.error(error);
+                showToast(t("toastTransferPlaybackError"), 'error');
+            }
+        }
+    };
     const handlePlayerReady = async (id: string) => {
         if (spotifySdk) {
             try {
@@ -48,6 +77,7 @@ function Game() {
                 } else {
                     console.log('The player is already active!');
                 }
+                await fetchDevices();
             } catch (e) {
                 console.error(e)
                 showToast(t("toastTransferPlaybackError"), 'error');
@@ -140,6 +170,23 @@ function Game() {
                     <WebPlayback token={accessToken} onPlayerReady={handlePlayerReady} hidePlayer={true} />
                 </div>
             )}
+            <div className="device-selector">
+                {/* <label htmlFor="device-select">Select Spotify Device:</label> */}
+                <select
+                    id="device-select"
+                    value={selectedDeviceId || ''}
+                    onClick={handleDropdownOpen}
+                    onChange={(e) => handleDeviceSelect(e.target.value)}
+                >
+                    <option value="" disabled>Select a Spotify Device</option>
+                    {devices.map((device) => (
+                        <option key={device.id} value={device.id || ''}>
+                            {/* {device.name} {device.is_active ? '(Active)' : ''} */}
+                            {device.name}
+                        </option>
+                    ))}
+                </select>
+            </div>
             {/* {hasPermission === false && (
                 <div>
                     <h2>{t("cameraPermissionDenied")}</h2>
