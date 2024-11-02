@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 
 import { useSpotifyWebPlayerContext, useSpotifyWebPlayerContextDispatch } from '../context/SpotifyWebPlayerContext';
 import { useTranslation } from '../i18n';
+import { getBrowserName } from '../services/browser';
 
 interface WebPlaybackProps {
     token: string;
@@ -29,9 +30,13 @@ const WebPlayback: React.FC<WebPlaybackProps> = ({ token, onPlayerReady, hidePla
     
         const initializePlayer = () => {
             if (player || !window.Spotify) return;
+            const browserName = getBrowserName();
+            const browserNameConcat = browserName !== "Unknown" ? ` (${browserName})` : "";
+            const playerNameDevModeSuffix = import.meta.env.DEV ? " - Dev" : "";
     
             player = new window.Spotify.Player({
                 name: import.meta.env.VITE_APP_NAME,
+                name: `${import.meta.env.VITE_APP_NAME}${browserNameConcat}${playerNameDevModeSuffix}`,
                 getOAuthToken: (cb: (token: string) => void) => {
                     cb(token);
                 },
