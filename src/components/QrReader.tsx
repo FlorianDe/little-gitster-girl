@@ -67,7 +67,7 @@ const QrReader = forwardRef<QrReaderRef, QrReaderProps>((props, ref) => {
         try {
             scanner?.current?.pause();
         } catch (e) {
-            console.error('Somehow wasnt able to pause the qr code scanner!');
+            console.error('Somehow wasnt able to pause the qr code scanner!', e);
         }
     };
 
@@ -75,7 +75,7 @@ const QrReader = forwardRef<QrReaderRef, QrReaderProps>((props, ref) => {
         try {
             scanner?.current?.stop();
         } catch (e) {
-            console.error('Somehow wasnt able to stop the qr code scanner!');
+            console.error('Somehow wasnt able to stop the qr code scanner!', e);
         }
     };
 

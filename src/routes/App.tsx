@@ -1,4 +1,7 @@
-import { useState, useMemo, useCallback } from 'react';
+
+import * as Sentry from "@sentry/react";
+
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import { matchPath, Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 import NeonText from '../components/NeonText';
@@ -17,12 +20,21 @@ function App() {
     const navigate = useNavigate();
     const location = useLocation();
     const isExactRoot = matchPath({ path: '/', end: true }, location.pathname);
-
+    
     const [drawerOpen, setDrawerOpen] = useState(false);
     const { authenticate, user, logOut, isAuthenticated, isCheckingAuthentication } = useSpotifyAuth();
 
+    useEffect(() => {
+        if(user){
+            Sentry.setUser({ username: user?.display_name });
+        } else {
+            Sentry.setUser(null);
+        }
+    },[user])
+
     const handleLogOut = useCallback(() => {
         logOut();
+        handleDrawerClose();
         navigate("/", {replace: true});
     },[navigate, logOut])
 
@@ -52,7 +64,7 @@ function App() {
             <div className={`main-content`}>
                 {drawerOpen && <div className="overlay" onClick={handleDrawerClose}></div>}
                 
-                {!isAuthenticated && !isCheckingAuthentication && (
+                {!isAuthenticated && !isCheckingAuthentication && isExactRoot && (
                     <div className="not-authenticated-container">
                         <NeonText
                             text={import.meta.env.VITE_APP_NAME}
@@ -64,7 +76,7 @@ function App() {
                         <SpotifyLoginButton onClick={authenticate}>{t("loginWithSpotify")}</SpotifyLoginButton>
                     </div>
                 )}
-                {isAuthenticated && isExactRoot && <RootHome></RootHome>}
+                {isAuthenticated && isExactRoot && <RootHome/>}
                 <Outlet />
             </div>
         </div>
