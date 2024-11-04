@@ -157,7 +157,7 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
                             <div className="checkbox">{selectedPlaylists.includes(id) ? '☑' : '☐'}</div>
                         )}
                         {
-                            playlist.images.length > 0 ? <img src={playlist.images[0].url } alt={playlist.name} className="playlist-image" /> : <QuestionMarkIcon className="playlist-image" style={{padding: "12px"}}/>
+                            playlist && playlist.images && playlist.images.length > 0 ? <img src={playlist.images[0].url } alt={playlist.name} className="playlist-image" /> : <QuestionMarkIcon className="playlist-image" style={{padding: "12px"}}/>
                         }
                         
                         <div className="playlist-info">

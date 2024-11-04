@@ -1,7 +1,8 @@
-import { TrackReference, SimplifiedAlbum, SimplifiedShow, Track, Episode, SimplifiedPlaylist } from '@spotify/web-api-ts-sdk';
+import { TrackReference, SimplifiedAlbum, SimplifiedShow, Track, Episode, SimplifiedPlaylist, Image } from '@spotify/web-api-ts-sdk';
 
-export type SimplifiedPlaylistTracksRequired = SimplifiedPlaylist & {
+export type SimplifiedPlaylistTracksRequired = Omit<SimplifiedPlaylist, "images"> & {
     tracks: TrackReference;
+    images?: Image[];
 }
 
 export type ReducedEpisode = Pick<Episode, "type"> & {show: Pick<SimplifiedShow, "id">};  
