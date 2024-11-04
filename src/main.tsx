@@ -42,13 +42,12 @@ const router = createBrowserRouter(
                         </ProtectedRoute>
                     ),
                 },
+                {
+                    path: '*',
+                    element: <NotFound />,
+                },
             ],
             errorElement: <ErrorComponent />,
-        },
-
-        {
-            path: '*',
-            element: <NotFound />,
         },
     ],
     { basename: import.meta.env.BASE_URL }

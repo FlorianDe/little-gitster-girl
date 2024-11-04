@@ -53,7 +53,7 @@ function App() {
             <div className={`main-content`}>
                 {drawerOpen && <div className="overlay" onClick={handleDrawerClose}></div>}
                 
-                {!isAuthenticated && !isCheckingAuthentication && (
+                {!isAuthenticated && !isCheckingAuthentication && isExactRoot && (
                     <div className="not-authenticated-container">
                         <NeonText
                             text={import.meta.env.VITE_APP_NAME}
@@ -65,7 +65,7 @@ function App() {
                         <SpotifyLoginButton onClick={authenticate}>{t("loginWithSpotify")}</SpotifyLoginButton>
                     </div>
                 )}
-                {isAuthenticated && isExactRoot && <RootHome></RootHome>}
+                {isAuthenticated && isExactRoot && <RootHome/>}
                 <Outlet />
             </div>
         </div>
