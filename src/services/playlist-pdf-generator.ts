@@ -188,7 +188,7 @@ const writeStatisticsPage = async (
     };
     const playlistInfos = playlists.map<PlaylistInfoType>((p) => ({
         name: p.name,
-        image: p.images.length > 0 ? p.images[0].url : null, // TODO: Just assuming the largest image is first...
+        image: p && p.images && p.images.length > 0 ? p.images[0].url : null, // TODO: Just assuming the largest image is first...
         tracks: p.tracks.total,
         owner: p.owner.display_name,
     }));
