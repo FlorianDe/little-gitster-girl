@@ -35,13 +35,21 @@
 
 .game-main-section {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
+    padding: 10px
 }
 
 .qr-reader-container {
     position: relative;
-    
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    aspect-ratio: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    max-height: calc(100vh - 2*10px - 1em - 56px - 38.5px - 20px);
     /* width: 200px;
     height: 200px; */
 }

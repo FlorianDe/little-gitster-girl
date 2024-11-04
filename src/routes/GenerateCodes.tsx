@@ -89,11 +89,11 @@ const GenerateCodes: React.FC = () => {
             // setProgress((_) => progress)
             if (oldSection !== section) {
                 oldSection = section;
-                flushSync(() => setProgressSection((_) => section));
+                flushSync(() => setProgressSection(section));
                 // setProgressSection((_) => section)
                 await delay(500);
             }
-            flushSync(() => setProgress((_) => progress));
+            flushSync(() => setProgress(progress));
         });
 
         const pdfBlob = pdf.output('blob');

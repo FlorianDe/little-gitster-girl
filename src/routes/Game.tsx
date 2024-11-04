@@ -38,6 +38,7 @@ function Game() {
                                 'info'
                             )
                         )
+                        // eslint-disable-next-line @typescript-eslint/no-unused-vars
                         .catch((_e) => showToast(t("toastTransferPlaybackError"), 'error'));
 
                     const repeatMode = 'track';
