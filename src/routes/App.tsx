@@ -1,4 +1,7 @@
-import { useState, useMemo, useCallback } from 'react';
+
+import * as Sentry from "@sentry/react";
+
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import { matchPath, Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 import NeonText from '../components/NeonText';
@@ -17,9 +20,17 @@ function App() {
     const navigate = useNavigate();
     const location = useLocation();
     const isExactRoot = matchPath({ path: '/', end: true }, location.pathname);
-
+    
     const [drawerOpen, setDrawerOpen] = useState(false);
     const { authenticate, user, logOut, isAuthenticated, isCheckingAuthentication } = useSpotifyAuth();
+
+    useEffect(() => {
+        if(user){
+            Sentry.setUser({ username: user?.display_name });
+        } else {
+            Sentry.setUser(null);
+        }
+    },[user])
 
     const handleLogOut = useCallback(() => {
         logOut();

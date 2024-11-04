@@ -1,6 +1,10 @@
+
+
+import { sentryCreateBrowserRouter } from './services/sentry-service';
+
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 
 import App from './routes/App';
 import Game from './routes/Game';
@@ -16,7 +20,7 @@ import { SpotifyPlayerContextProvider } from './context/SpotifyWebPlayerContext'
 
 import './index.css';
 
-const router = createBrowserRouter(
+const router = sentryCreateBrowserRouter(
     [
         {
             path: '/',
