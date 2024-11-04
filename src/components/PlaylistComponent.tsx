@@ -9,6 +9,7 @@ import LockIcon from './icons/LockIcon';
 import Spinner from './Spinner';
 
 import './PlaylistComponent.css';
+import QuestionMarkIcon from './icons/QuestionMarkIcon';
 
 type PlaylistComponentProps = {
     isGenerating: boolean;
@@ -155,7 +156,10 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
                         {isSelectionMode && (
                             <div className="checkbox">{selectedPlaylists.includes(id) ? '☑' : '☐'}</div>
                         )}
-                        <img src={playlist.images[0]?.url} alt={playlist.name} className="playlist-image" />
+                        {
+                            playlist.images.length > 0 ? <img src={playlist.images[0].url } alt={playlist.name} className="playlist-image" /> : <QuestionMarkIcon className="playlist-image" style={{padding: "12px"}}/>
+                        }
+                        
                         <div className="playlist-info">
                             <h3 className="playlist-name">
                                 {!playlist.public && (
