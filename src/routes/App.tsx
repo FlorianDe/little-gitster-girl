@@ -23,6 +23,7 @@ function App() {
 
     const handleLogOut = useCallback(() => {
         logOut();
+        handleDrawerClose();
         navigate("/", {replace: true});
     },[navigate, logOut])
 
