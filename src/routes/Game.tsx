@@ -57,8 +57,13 @@ function Game() {
     };
 
     const scanNextSong = () => {
-        player?.activateElement();
-        qrCodeReader.current?.start(() => setQrScanningStarted(true));
+        if(!qrScanningStarted){
+            player?.activateElement();
+            qrCodeReader.current?.start(() => setQrScanningStarted(true));
+        } else {
+            qrCodeReader.current?.pause();
+            setQrScanningStarted(false);
+        }
     };
 
     const handleStopScanning = () => {
@@ -171,7 +176,7 @@ function Game() {
                         )}
                     </div>
                     <div className="game-main-section__next-song-btn">
-                        <button onClick={scanNextSong}>{t("scanNextSong")}</button>
+                        <button onClick={scanNextSong}>{qrScanningStarted ? t("stopScanning") : t("scanNextSong")}</button>
                     </div>
                 </div>
             {/* )} */}
