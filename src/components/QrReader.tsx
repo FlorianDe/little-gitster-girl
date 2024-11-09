@@ -93,7 +93,7 @@ const QrReader = forwardRef<QrReaderRef, QrReaderProps>((props, ref) => {
                 onDecodeError: onScanFail,
                 preferredCamera: 'environment',
                 highlightScanRegion: true,
-                highlightCodeOutline: true,
+                highlightCodeOutline: false,
                 // overlay: qrBoxEl?.current || undefined,
                 returnDetailedScanResult: true,
             });
