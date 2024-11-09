@@ -13,7 +13,8 @@ const en = {
     requestCameraPermission: 'Request Camera Permission',
     cameraPermissionDenied: 'Camera permission denied.',
     cameraPermissionUserManualChangeAdvice: 'You need to change this in your settings.',
-    scanNextSong: 'Scan Next Song',
+    scanNextSong: 'Scan next song',
+    stopScanning: 'Stop scanning',
     generateCodesViewAuthMissingErrorMsg:
         'Before you can generate playlists for the game you have to login via Spotify!',
     notFound404: '404 Not Found',
@@ -59,6 +60,7 @@ const de: Translation = {
     cameraPermissionDenied: 'Kameraerlaubnis verweigert.',
     cameraPermissionUserManualChangeAdvice: 'Sie müssen dies in Ihren Einstellungen ändern.',
     scanNextSong: 'Nächsten Song scannen',
+    stopScanning: 'Scannen stoppen',
     generateCodesViewAuthMissingErrorMsg:
         'Bevor Sie Playlists für das Spiel generieren können, müssen Sie sich über Spotify einloggen!',
     notFound404: '404 Nicht gefunden',
