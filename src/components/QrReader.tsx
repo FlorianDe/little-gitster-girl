@@ -32,16 +32,16 @@ export type QrReaderProps = {
     isStarted: boolean;
 };
 
-const QrReader = forwardRef<QrReaderRef, QrReaderProps>((props, ref) => {
+const QrReader = forwardRef<QrReaderRef, QrReaderProps>(({onScanSuccess}, ref) => {
     const scanner = useRef<QrScanner>();
     const videoEl = useRef<HTMLVideoElement>(null);
     // const qrBoxEl = useRef<HTMLDivElement>(null);
 
-    const onScanSuccess = useCallback((result: QrScanner.ScanResult) => {
-        props.onScanSuccess(result, scanner?.current);
-    }, [props]);
+    const onScanSuccessInternal = useCallback((result: QrScanner.ScanResult) => {
+        onScanSuccess(result, scanner?.current);
+    }, [onScanSuccess]);
 
-    const onScanFail = useCallback((err: string | Error) => {
+    const onScanFailInternal = useCallback((err: string | Error) => {
         console.debug(err);
     }, []);
 
@@ -88,9 +88,9 @@ const QrReader = forwardRef<QrReaderRef, QrReaderProps>((props, ref) => {
 
     useEffect(() => {
         if (videoEl?.current && !scanner.current) {
-            scanner.current = new QrScanner(videoEl?.current, onScanSuccess, {
+            scanner.current = new QrScanner(videoEl?.current, onScanSuccessInternal, {
                 // maxScansPerSecond: 20,
-                onDecodeError: onScanFail,
+                onDecodeError: onScanFailInternal,
                 preferredCamera: 'environment',
                 highlightScanRegion: true,
                 highlightCodeOutline: false,
@@ -104,7 +104,7 @@ const QrReader = forwardRef<QrReaderRef, QrReaderProps>((props, ref) => {
                 scanner?.current?.stop();
             }
         };
-    }, [onScanFail, onScanSuccess]);
+    }, [onScanFailInternal, onScanSuccessInternal]);
 
     return (
         <div className="qr-reader">
