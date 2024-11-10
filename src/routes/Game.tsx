@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo, useCallback } from 'react';
 import QrScanner from 'qr-scanner';
 
 // import { useCameraPermission } from '../hooks/useCameraPermission';
@@ -11,6 +11,7 @@ import { isSpotifyError } from '../services/spotify-helper';
 
 import './Game.css';
 import { useTranslation } from '../i18n';
+import { ArtworkImage, createArtworkTitleImage } from '../paintings/title-image';
 
 function Game() {
     const {t} = useTranslation();
@@ -23,6 +24,22 @@ function Game() {
     const [qrScanningStarted, setQrScanningStarted] = useState<boolean>(false);
     const [accessToken, setAccessToken] = useState<string | undefined>(undefined);
     const qrCodeReader = useRef<QrReaderRef>(null);
+
+    const artworks = useMemo(() => {
+        return createArtworkTitleImage();
+    }, [])
+
+    const setStaticMediaSessionInformation = useCallback((description: string, artworks: ArtworkImage[]) => {
+        if ('mediaSession' in navigator) {
+            if(!navigator.mediaSession.metadata || navigator.mediaSession.metadata?.title !== import.meta.env.VITE_APP_NAME){
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: import.meta.env.VITE_APP_NAME,
+                    artist: description,
+                    artwork: artworks?.map(a => ({ src: a.imageDataUrl, sizes: a.dimensionsString, type: a.imageMimeType })) ?? []
+                });
+            }
+        }
+    }, []);
 
     const handlePlayerReady = async (id: string) => {
         if (spotifySdk) {
@@ -120,6 +137,12 @@ function Game() {
             }
         }
     };
+
+    useEffect(() => {
+        if(player && !isPaused){
+            setStaticMediaSessionInformation(t("mediaSessionDescription"), [artworks])
+        }
+    }, [isPaused, player, setStaticMediaSessionInformation, artworks, t])
 
     useEffect(() => {
         const getAccessToken = async () => {
