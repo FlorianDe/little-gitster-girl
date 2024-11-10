@@ -1,8 +1,19 @@
-export const createArtworkTitleImage = (): string => {
+export type ArtworkImage = {
+    imageDataUrl: string;
+    dimensionsString: string;
+    imageMimeType: string;
+}
+
+export const createArtworkTitleImage = (opts?: {size?: number}): ArtworkImage => {
+    const {
+        size = 512
+    } = opts ?? {};
+
     const canvas = document.createElement('canvas');
-    canvas.width = 512;
-    canvas.height = 512;
+    canvas.width = size;
+    canvas.height = size;
     const ctx = canvas.getContext('2d');
+
     const destroyCanvas = () => {
         ctx?.clearRect(0, 0, canvas.width, canvas.height);
         canvas.width = 0;
@@ -103,7 +114,13 @@ export const createArtworkTitleImage = (): string => {
         neonNote(ctx, 145, 350, 50, 255, 2, 0)
     }
 
-    const dataUrl = canvas.toDataURL('image/png');
+    const imageMimeType = 'image/png';
+    const imageDataUrl = canvas.toDataURL(imageMimeType);
     destroyCanvas();
-    return dataUrl;
+
+    return {
+        imageDataUrl,
+        dimensionsString: `${size}x${size}`,
+        imageMimeType
+    }
 };

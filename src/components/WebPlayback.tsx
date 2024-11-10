@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 
 import { useSpotifyWebPlayerContext, useSpotifyWebPlayerContextDispatch } from '../context/SpotifyWebPlayerContext';
 import { useTranslation } from '../i18n';
-import { createArtworkTitleImage } from '../paintings/title-image';
 
 const useUpdateIframeTitle = (iframeSrc: string, newTitle: string) => {
     useEffect(() => {
@@ -27,18 +26,6 @@ const useUpdateIframeTitle = (iframeSrc: string, newTitle: string) => {
         return () => observer.disconnect();
     }, [iframeSrc, newTitle]);
 };
-
-const setStaticMediaSessionInformation = (description: string) => {
-    if ('mediaSession' in navigator) {
-        navigator.mediaSession.metadata = new MediaMetadata({
-            title: import.meta.env.VITE_APP_NAME,
-            artist: description,
-            artwork: [
-                { src: createArtworkTitleImage(), sizes: '512x512', type: 'image/jpeg' }
-            ]
-      });
-    }
-  };
 
 interface WebPlaybackProps {
     token: string;
@@ -84,7 +71,6 @@ const WebPlayback: React.FC<WebPlaybackProps> = ({ token, onPlayerReady, hidePla
                         player: player!, //TODO CHECK!?
                     },
                 });
-                setStaticMediaSessionInformation(t("mediaSessionDescription"));
               
                 onPlayerReady(device_id);
             });
@@ -189,3 +175,4 @@ const WebPlayback: React.FC<WebPlaybackProps> = ({ token, onPlayerReady, hidePla
 };
 
 export default WebPlayback;
+
