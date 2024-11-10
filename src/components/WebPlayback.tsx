@@ -3,6 +3,42 @@ import React, { useEffect } from 'react';
 
 import { useSpotifyWebPlayerContext, useSpotifyWebPlayerContextDispatch } from '../context/SpotifyWebPlayerContext';
 import { useTranslation } from '../i18n';
+import { createArtworkTitleImage } from '../paintings/title-image';
+
+const useUpdateIframeTitle = (iframeSrc: string, newTitle: string) => {
+    useEffect(() => {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'childList') {
+                    const iframe = Array.from(document.querySelectorAll('iframe'))
+                        .find((el) => el.src === iframeSrc);
+                    
+                    if (iframe) {
+                        iframe.title = newTitle;    
+                        console.log(`Iframe title updated to: ${newTitle}`);
+                        observer.disconnect();
+                    }
+                }
+            });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: false });
+
+        return () => observer.disconnect();
+    }, [iframeSrc, newTitle]);
+};
+
+const setStaticMediaSessionInformation = (description: string) => {
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+            title: import.meta.env.VITE_APP_NAME,
+            artist: description,
+            artwork: [
+                { src: createArtworkTitleImage(), sizes: '512x512', type: 'image/jpeg' }
+            ]
+      });
+    }
+  };
 
 interface WebPlaybackProps {
     token: string;
@@ -14,6 +50,7 @@ const WebPlayback: React.FC<WebPlaybackProps> = ({ token, onPlayerReady, hidePla
     const { t } = useTranslation();
     const spotifyPlayerState = useSpotifyWebPlayerContext();
     const dispatch = useSpotifyWebPlayerContextDispatch();
+    useUpdateIframeTitle('https://sdk.scdn.co/embedded/index.html', import.meta.env.VITE_APP_NAME);
 
     useEffect(() => {
         const spotifyPlayerScriptId = 'spotify-player-script';
@@ -47,6 +84,8 @@ const WebPlayback: React.FC<WebPlaybackProps> = ({ token, onPlayerReady, hidePla
                         player: player!, //TODO CHECK!?
                     },
                 });
+                setStaticMediaSessionInformation(t("mediaSessionDescription"));
+              
                 onPlayerReady(device_id);
             });
     

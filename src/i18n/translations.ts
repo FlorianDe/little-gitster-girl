@@ -19,7 +19,7 @@ const en = {
         'Before you can generate playlists for the game you have to login via Spotify!',
     notFound404: '404 Not Found',
     pageNotFoundMessage: 'The page you are looking for does not exist.',
-    pageNotFoundJokeMessage: 'Maybe the music took a break? Let’s get back to where the tunes are.',
+    pageNotFoundJokeMessage: 'Maybe the music took a break? Let\'s get back to where the tunes are.',
     goBackToHome: 'Go back to Home',
     cancelSelection: 'Cancel Selection',
     selectPlaylists: 'Select Playlists',
@@ -38,6 +38,7 @@ const en = {
     toastStartResumeError:
         `Playback was not possible try to transfer the playback via a device you have spotify on to "${import.meta.env.VITE_APP_NAME}" or try restarting the website!`,
     toastYouNeedToBeLoggedInToAccessPage: 'You need to be logged in to access this page.',
+    mediaSessionDescription: 'It\'s time to guess.'
 };
 
 export type TranslationKeys = keyof typeof en;
@@ -83,7 +84,8 @@ const de: Translation = {
     toastTransferPlaybackError: 'Fehler beim Übertragen der Wiedergabe zum Web',
     toastStartResumeError:
         `Wiedergabe war nicht möglich. Versuchen Sie, die Wiedergabe über ein Gerät, auf dem Sie Spotify haben, zu "${import.meta.env.VITE_APP_NAME}" zu übertragen, oder versuchen Sie, die Website neu zu starten!`,
-    toastYouNeedToBeLoggedInToAccessPage: 'Sie müssen eingeloggt sein, um auf diese Seite zuzugreifen.',
+    toastYouNeedToBeLoggedInToAccessPage: 'Sie müssen eingeloggt sein, um auf diese Seite zuzugreifen.',    
+    mediaSessionDescription: 'Zeit zu raten.'
 };
 
 export const translations: Record<SupportedLanguage, Translation> = {
