@@ -21,6 +21,28 @@ export const createArtworkTitleImage = (opts?: {size?: number}): ArtworkImage =>
     }
 
     if (ctx) {
+        const drawBackground = () => {
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        const drawNeon = (ctx: CanvasRenderingContext2D, r: number,g: number,b: number, drawFn: () => void) => {
+            const minSize = Math.min(ctx.canvas.width, ctx.canvas.height)
+            const iterations = 8;
+            ctx.shadowColor = `rgb(${r},${g},${b})`;
+            ctx.strokeStyle= `rgba(${r},${g},${b},${1/iterations})`;
+            ctx.shadowBlur=minSize*0.05;
+
+            for(let i = iterations; i>=0; i--){
+                ctx.lineWidth=Math.pow(1.4, i)*(minSize*0.01);
+                drawFn();
+            }
+
+            ctx.strokeStyle= '#fff';
+            ctx.lineWidth=minSize*0.009;
+            drawFn();
+        }
+
         const drawRectangle = function(x: number, y: number, w: number, h: number, border: number){
             ctx.beginPath();
             ctx.moveTo(x+border, y);
@@ -36,82 +58,39 @@ export const createArtworkTitleImage = (opts?: {size?: number}): ArtworkImage =>
             ctx.stroke();
         }
 
-        const neonRect = function(ctx: CanvasRenderingContext2D, x: number,y: number,w: number,h: number,r: number,g: number,b: number){
-            ctx.shadowColor = "rgb("+r+","+g+","+b+")";
-            ctx.shadowBlur=20;
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=20;
-            drawRectangle(x,y,w,h,1.5);
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=15;
-            drawRectangle(x,y,w,h,1.5);
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=10;
-            drawRectangle(x,y,w,h,1.5);
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=5;
-            drawRectangle(x,y,w,h,1.5);
-
-            ctx.strokeStyle= '#fff';
-            ctx.lineWidth=2;
-            drawRectangle(x,y,w,h,1.5);
+        const drawNeonBorder = function(ctx: CanvasRenderingContext2D, x: number,y: number,w: number,h: number,r: number,g: number,b: number){
+            drawNeon(ctx,r,g,b, () => drawRectangle(x,y,w,h,3));
         };
 
-        const drawNote = function(ctx: CanvasRenderingContext2D, x: number,y: number,radius: number){
-            const beamHeight = 200;
-            const beamWidth = 200;
-            const beamSteep = 50;
+        const drawNote = function(ctx: CanvasRenderingContext2D, x: number,y: number){
+            const width = ctx.canvas.width;
+            const height = ctx.canvas.height;
+
+            const beamHeight = height*0.4;
+            const beamWidth = width*0.4;
+            const beamSteep = height*0.1;
+            const radius = width*0.1;
+
+            const offsetY = (beamHeight)/2
+            const offsetX = -(beamWidth+radius/2)/2
 
             ctx.beginPath();
-            ctx.arc(x, y, radius, 0, Math.PI * 2);
-            ctx.moveTo(x + radius, y);
-            ctx.lineTo(x + radius, y - beamHeight);
-            ctx.lineTo(x + radius+beamWidth, y - beamHeight - beamSteep);
-            ctx.lineTo(x + radius+beamWidth, y - beamSteep);
-            ctx.arc(x+beamWidth, y-beamSteep, radius, 0, Math.PI * 2);
+            ctx.arc(x+offsetX, y+offsetY, radius, 0, Math.PI * 2);
+            ctx.moveTo(x + radius+offsetX, y+offsetY);
+            ctx.lineTo(x + radius+offsetX, y - beamHeight +offsetY);
+            ctx.lineTo(x + radius+beamWidth+offsetX, y - beamHeight - beamSteep+offsetY);
+            ctx.lineTo(x + radius+beamWidth+offsetX, y - beamSteep+offsetY);
+            ctx.arc(x+beamWidth+offsetX, y-beamSteep+offsetY, radius, 0, Math.PI * 2);
             ctx.stroke();
         }
         
-        const neonNote = function(ctx: CanvasRenderingContext2D, x: number,y: number,radius: number,r: number,g: number,b: number){
-            ctx.shadowColor = "rgb("+r+","+g+","+b+")";
-            ctx.shadowBlur=10;
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=60;
-            drawNote(ctx, x,y,radius);
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=40;
-            drawNote(ctx, x,y,radius);
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=25;
-            drawNote(ctx, x,y,radius);
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=15;
-            drawNote(ctx, x,y,radius);
-
-            ctx.strokeStyle= "rgba("+r+","+g+","+b+",0.2)";
-            ctx.lineWidth=5;
-            drawNote(ctx, x,y,radius);
-
-            ctx.strokeStyle= '#fff';
-            ctx.lineWidth=5;
-            drawNote(ctx, x,y,radius);
-        }
-        const drawBackground = () => {
-            ctx.fillStyle = '#000';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        const drawNeonNote = function(ctx: CanvasRenderingContext2D, x: number,y: number,r: number,g: number,b: number){
+            drawNeon(ctx,r,g,b, () => drawNote(ctx, x,y));
         }
 
         drawBackground();
-        neonRect(ctx, 0, 0, canvas.width, canvas.height, 0, 88, 255)
-        neonNote(ctx, 145, 350, 50, 255, 2, 0)
+        drawNeonBorder(ctx, 0, 0, canvas.width, canvas.height, 0, 88, 255)
+        drawNeonNote(ctx, canvas.width/2, canvas.height/2, 255, 2, 0)
     }
 
     const imageMimeType = 'image/png';
