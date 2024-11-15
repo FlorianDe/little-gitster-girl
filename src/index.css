@@ -86,6 +86,8 @@ body {
     height: 100%;
     color: var(--text-color);
     background-color: var(--background-color);
+    scrollbar-color: var(--primary-color) transparent;
+    scrollbar-width: thin;
 }
 
 #root {
