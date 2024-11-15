@@ -1,7 +1,7 @@
 import { defineConfig, CommonServerOptions } from "vite";
+import process from "node:process";
 import react from "@vitejs/plugin-react";
 import { sentryVitePlugin } from "@sentry/vite-plugin";
-import process from "node:process";
 import fs from 'fs';
 import path from 'path';
 
@@ -18,6 +18,7 @@ const getHttpsOptions = () => {
 }
 const isHttps = process.env.VITE_HTTPS === 'true';
 const https: CommonServerOptions['https'] | undefined = isHttps ? getHttpsOptions() : undefined;
+import { displayNetworkUrlWithHostnamePlugin } from './config/vite-plugins/vite-display-network-url-hostname-plugin';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -33,6 +34,7 @@ export default defineConfig({
         disable: process.env.SENTRY_PLUGIN_DISABLED == "true"
       }),
       react(),
+      displayNetworkUrlWithHostnamePlugin(),
     ],
     preview: {
       port: 3000,

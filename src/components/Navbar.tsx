@@ -10,7 +10,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ toggleDrawer, showTitle, title, isMenuOpen }) => {
     return (
-        <header className="navbar">
+        <div className="navbar">
             <button className={`navbar__menu-btn ${isMenuOpen ? 'open' : ''}`} onClick={toggleDrawer} aria-label="Toggle Menu">
                 <span className="navbar__menu-icon"></span>
                 <span className="navbar__menu-icon"></span>
@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDrawer, showTitle, title, isMenuO
             {showTitle && title && (
                 <h1 className="navbar__title">{title}</h1>
             )}
-        </header>
+        </div>
     );
 };
 
