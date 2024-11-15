@@ -38,7 +38,8 @@ const en = {
     toastStartResumeError:
         `Playback was not possible try to transfer the playback via a device you have spotify on to "${import.meta.env.VITE_APP_NAME}" or try restarting the website!`,
     toastYouNeedToBeLoggedInToAccessPage: 'You need to be logged in to access this page.',
-    mediaSessionDescription: 'It\'s time to guess.'
+    mediaSessionDescription: 'It\'s time to guess.',
+    lazyLoadingComponentText: 'Loading view...'
 };
 
 export type TranslationKeys = keyof typeof en;
@@ -85,7 +86,8 @@ const de: Translation = {
     toastStartResumeError:
         `Wiedergabe war nicht möglich. Versuchen Sie, die Wiedergabe über ein Gerät, auf dem Sie Spotify haben, zu "${import.meta.env.VITE_APP_NAME}" zu übertragen, oder versuchen Sie, die Website neu zu starten!`,
     toastYouNeedToBeLoggedInToAccessPage: 'Sie müssen eingeloggt sein, um auf diese Seite zuzugreifen.',    
-    mediaSessionDescription: 'Zeit zu raten.'
+    mediaSessionDescription: 'Zeit zu raten.',
+    lazyLoadingComponentText: 'Oberfläche wird geladen...'
 };
 
 export const translations: Record<SupportedLanguage, Translation> = {
