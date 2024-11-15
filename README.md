@@ -75,10 +75,12 @@ You can change the port and the base-name inside the vite.config.ts but be aware
 ### Available Scripts
 
 - npm run dev – Runs the app in development mode.
+- npm run dev:https – Runs the app in development mode with HTTPS.
 - npm test – Launches the test runner.
 - npm run build – Builds the app for production.
 - npm run preview - Serves the production build as preview.
 - npm run lint – Checks the code for linting errors.
+- npm run generate-certs – Generate the self signed certificates needed for serving the app with https locally.
   
 ### Project Structure
 ```bash

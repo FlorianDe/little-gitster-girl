@@ -1,7 +1,23 @@
-import { defineConfig } from "vite";
+import { defineConfig, CommonServerOptions } from "vite";
 import react from "@vitejs/plugin-react";
 import { sentryVitePlugin } from "@sentry/vite-plugin";
 import process from "node:process";
+import fs from 'fs';
+import path from 'path';
+
+const getHttpsOptions = () => {
+  try{
+    return {
+      key: fs.readFileSync(path.resolve(__dirname, 'certs', 'private.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'certs', 'certificate.crt')),
+    }
+  } catch(e){
+    const errorCause = e instanceof Error ? e : new Error(String(e));
+    throw new Error(`Could not find certificate files for https. Be sure, that you created them before: "${errorCause}"`, {cause: errorCause})
+  }
+}
+const isHttps = process.env.VITE_HTTPS === 'true';
+const https: CommonServerOptions['https'] | undefined = isHttps ? getHttpsOptions() : undefined;
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -20,8 +36,12 @@ export default defineConfig({
     ],
     preview: {
       port: 3000,
+      https,
+      strictPort: true,
     },
     server: {
+      https,
       port: 3000,
+      strictPort: true
     },
   });
