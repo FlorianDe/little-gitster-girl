@@ -26,7 +26,7 @@ function Game() {
     const qrCodeReader = useRef<QrReaderRef>(null);
 
     const artworks = useMemo(() => {
-        return createArtworkTitleImage();
+        return [ createArtworkTitleImage({size: 512}), createArtworkTitleImage({size: 128})];
     }, [])
 
     const setStaticMediaSessionInformation = useCallback((description: string, artworks: ArtworkImage[]) => {
@@ -140,7 +140,7 @@ function Game() {
 
     useEffect(() => {
         if(player && !isPaused){
-            setStaticMediaSessionInformation(t("mediaSessionDescription"), [artworks])
+            setStaticMediaSessionInformation(t("mediaSessionDescription"), artworks)
         }
     }, [isPaused, player, setStaticMediaSessionInformation, artworks, t])
 

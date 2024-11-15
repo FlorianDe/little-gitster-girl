@@ -2,23 +2,23 @@
 
 import { sentryCreateBrowserRouter } from './services/sentry-service';
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom';
 
 import App from './routes/App';
-import Game from './routes/Game';
-import PlaylistComponent from './routes/GenerateCodes';
 import NotFound from './routes/NotFound';
 import ErrorComponent from './routes/ErrorComponent';
 import ProtectedRoute from './routes/ProtectedRoute';
-// import { RootHome } from './routes/RootHome';
+
 import { TranslationProvider } from './i18n';
 import { SpotifyAuthProvider } from './auth';
 import { ToastProvider } from './context/Toast';
 import { SpotifyPlayerContextProvider } from './context/SpotifyWebPlayerContext';
 
 import './index.css';
+import LoadingSpinner from './components/LoadingSpinner';
+import { GameLazy, GenerateCodesLazy } from './routes/lazy';
 
 const router = sentryCreateBrowserRouter(
     [
@@ -26,15 +26,13 @@ const router = sentryCreateBrowserRouter(
             path: '/',
             element: <App />,
             children: [
-                // {
-                //     index: true,
-                //     element: <RootHome />,
-                // },
                 {
                     path: '/game',
                     element: (
                         <ProtectedRoute>
-                            <Game />
+                            <Suspense fallback={<LoadingSpinner/>}>
+                                <GameLazy />
+                            </Suspense>
                         </ProtectedRoute>
                     ),
                 },
@@ -42,7 +40,9 @@ const router = sentryCreateBrowserRouter(
                     path: '/generate',
                     element: (
                         <ProtectedRoute>
-                            <PlaylistComponent />
+                            <Suspense fallback={<LoadingSpinner/>}>
+                                <GenerateCodesLazy />
+                            </Suspense>
                         </ProtectedRoute>
                     ),
                 },
