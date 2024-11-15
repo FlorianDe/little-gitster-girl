@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:https": "VITE_HTTPS=true vite",
     "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "generate-certs": "mkdir -p certs && openssl genpkey -algorithm RSA -out certs/private.key -pkeyopt rsa_keygen_bits:2048 && openssl req -new -key certs/private.key -out certs/csr.csr -subj \"/CN=localhost\" && openssl x509 -req -in certs/csr.csr -signkey certs/private.key -out certs/certificate.crt -days 365"
   },
   "dependencies": {
     "@sentry/react": "^8.36.0",
