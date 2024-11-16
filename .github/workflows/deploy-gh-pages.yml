@@ -39,6 +39,7 @@ jobs:
           SENTRY_ORG: ${{ vars.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_PLUGIN_ENABLED: true
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4

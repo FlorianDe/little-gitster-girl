@@ -7,6 +7,7 @@
     "dev": "vite",
     "dev:https": "VITE_HTTPS=true vite",
     "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
+    "build:sentry": "SENTRY_PLUGIN_ENABLED=true build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
