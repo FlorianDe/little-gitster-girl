@@ -1,4 +1,4 @@
-// import { Track } from '@spotify/web-api-ts-sdk';
+// import type { Track } from '@spotify/web-api-ts-sdk';
 
 export type SpotifyWebPlayerAction =
     | { type: 'SET_STATE_CHANGED'; payload: { state: Spotify.PlaybackState } }

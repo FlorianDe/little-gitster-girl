@@ -1,5 +1,5 @@
 
-import * as Sentry from "@sentry/react";
+import { setUser as sentrySetUser } from "@sentry/react";
 
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import { matchPath, Outlet, useLocation, useNavigate } from 'react-router-dom';
@@ -7,6 +7,7 @@ import { matchPath, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import NeonText from '../components/NeonText';
 import SideDrawer from '../components/SideDrawer';
 import SpotifyLoginButton from '../components/SpotifyLoginButton';
+import { ErrorMessage } from "../components/ErrorMessage";
 import { useSpotifyAuth } from '../auth';
 import Navbar from '../components/Navbar';
 import { useTranslation } from '../i18n';
@@ -22,13 +23,13 @@ function App() {
     const isExactRoot = matchPath({ path: '/', end: true }, location.pathname);
     
     const [drawerOpen, setDrawerOpen] = useState(false);
-    const { authenticate, user, logOut, isAuthenticated, isCheckingAuthentication } = useSpotifyAuth();
+    const { authenticate, user, logOut, isAuthenticated, isCheckingAuthentication, error } = useSpotifyAuth();
 
     useEffect(() => {
         if(user){
-            Sentry.setUser({ username: user?.display_name });
+            sentrySetUser({ username: user?.display_name });
         } else {
-            Sentry.setUser(null);
+            sentrySetUser(null);
         }
     },[user])
 
@@ -63,17 +64,20 @@ function App() {
             <SideDrawer isOpen={drawerOpen} onClose={handleDrawerClose} user={user} logOut={handleLogOut} />
             <div className={`main-content`}>
                 {drawerOpen && <div className="overlay" onClick={handleDrawerClose}></div>}
-                
+
                 {!isAuthenticated && !isCheckingAuthentication && isExactRoot && (
                     <div className="not-authenticated-container">
                         <NeonText
                             text={import.meta.env.VITE_APP_NAME}
                             style={{ paddingLeft: '1em', paddingRight: '1em' }}
                         ></NeonText>
-                        <h1 style={{ maxWidth: '400px', marginTop: '1em', marginBottom: '1em' }}>
-                            {t("loginRequiredMessage")}
-                        </h1>
-                        <SpotifyLoginButton onClick={authenticate}>{t("loginWithSpotify")}</SpotifyLoginButton>
+                        { error
+                             ? <ErrorMessage style={{maxWidth: '600px', marginTop: '1em', marginBottom: '1em', alignSelf: 'center'}} message={error instanceof Error ? JSON.stringify(error): error}/>
+                             : <h1 style={{ maxWidth: '400px', marginTop: '1em', marginBottom: '1em' }}>
+                                {t("loginRequiredMessage")}
+                            </h1>
+                        }
+                        <SpotifyLoginButton onClick={authenticate} disabled={!!error}>{t("loginWithSpotify")}</SpotifyLoginButton>
                     </div>
                 )}
                 {isAuthenticated && isExactRoot && <RootHome/>}

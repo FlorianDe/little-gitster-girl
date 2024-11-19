@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "generate-certs": "mkdir -p certs && openssl genpkey -algorithm RSA -out certs/private.key -pkeyopt rsa_keygen_bits:2048 && openssl req -new -key certs/private.key -out certs/csr.csr -subj \"/CN=localhost\" && openssl x509 -req -in certs/csr.csr -signkey certs/private.key -out certs/certificate.crt -days 365"
+    "generate-certs": "mkdir -p generated/certs && openssl genpkey -algorithm RSA -out generated/certs/private.key -pkeyopt rsa_keygen_bits:2048 && openssl req -new -key generated/certs/private.key -out generated/certs/csr.csr -subj \"/CN=localhost\" && openssl x509 -req -in generated/certs/csr.csr -signkey generated/certs/private.key -out generated/certs/certificate.crt -days 365"
   },
   "dependencies": {
     "@sentry/react": "^8.36.0",
@@ -35,6 +35,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "rollup-plugin-visualizer": "^5.12.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
     "vite": "^5.4.10",
