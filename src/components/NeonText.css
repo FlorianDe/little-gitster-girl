@@ -7,27 +7,21 @@
 
 .neon-text {
     --base-font-size: 3rem;
-
     --neon-text-color: #fff;
     --neon-text-shadow-color: #f40;
     --neon-border-color: #fff;
     --neon-border-shadow-color: #08f;
-
     --neon-text-shadow-size: 1 text-align: center;
     font-size: var(--base-font-size);
     font-weight: 200;
-    /* font-style: italic; */
     color: var(--neon-text-color);
-    font-family: 'Neon';
-    /* letter-spacing: 0.1em; */
+    font-family: 'NEON LED Light', sans-serif;
+    font-display: swap;
     text-transform: uppercase;
-
-    padding: calc(var(--base-font-size) * 0.5) calc(var(--base-font-size) * 0.5) calc(var(--base-font-size) * 0.25)
+    padding: calc(var(--base-font-size) * 0.45) calc(var(--base-font-size) * 0.5) calc(var(--base-font-size) * 0.35)
         calc(var(--base-font-size) * 0.5);
-
     border: 0.4rem solid var(--neon-border-color);
     border-radius: 2rem;
-
     text-shadow:
         calc(var(--base-font-size) * -0.05) calc(var(--base-font-size) * -0.05) calc(var(--base-font-size) * 0.25)
             var(--neon-text-color),
@@ -38,7 +32,6 @@
         0 0 calc(var(--base-font-size) * 0.6) var(--neon-text-shadow-color),
         0 0 calc(var(--base-font-size) * 0.8) var(--neon-text-shadow-color),
         0 0 calc(var(--base-font-size) * 0.9) var(--neon-text-shadow-color);
-
     box-shadow:
         0 0 0.5rem var(--neon-border-color),
         inset 0 0 0.5rem var(--neon-border-color),
