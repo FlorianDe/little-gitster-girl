@@ -3,8 +3,7 @@ import { describe, it, vi } from 'vitest'
 import fs from 'fs';
 import path from 'path';
 
-// import 'jest-canvas-mock';
-import { ExternalUrls, Image } from '@spotify/web-api-ts-sdk';
+import type { ExternalUrls, Image } from '@spotify/web-api-ts-sdk';
 
 import { PlaylistWithTracks, ReducedEpisode, ReducedPlaylistedTrack, ReducedTrack } from '../types/Spotify';
 

@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { SpotifyApi, UserProfile } from '@spotify/web-api-ts-sdk';
+import type { SpotifyApi, UserProfile } from '@spotify/web-api-ts-sdk';
 
 export type SpotifyAuthContextType = {
     sdk: SpotifyApi | null;

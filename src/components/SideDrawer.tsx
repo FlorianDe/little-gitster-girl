@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { UserProfile } from '@spotify/web-api-ts-sdk';
+import type { UserProfile } from '@spotify/web-api-ts-sdk';
 
 import { useTranslation } from '../i18n';
 
