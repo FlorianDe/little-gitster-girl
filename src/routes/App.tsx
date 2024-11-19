@@ -1,5 +1,5 @@
 
-import * as Sentry from "@sentry/react";
+import { setUser as sentrySetUser } from "@sentry/react";
 
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import { matchPath, Outlet, useLocation, useNavigate } from 'react-router-dom';
@@ -26,9 +26,9 @@ function App() {
 
     useEffect(() => {
         if(user){
-            Sentry.setUser({ username: user?.display_name });
+            sentrySetUser({ username: user?.display_name });
         } else {
-            Sentry.setUser(null);
+            sentrySetUser(null);
         }
     },[user])
 
