@@ -8,11 +8,19 @@ import { selfSignedHttpsSupportPlugin } from './config/vite-plugins/vite-self-si
 
 const isSentryDisabled = !(process.env.SENTRY_PLUGIN_ENABLED == "true")
 
+const externalLibs = ['canvg', 'html2canvas', 'dompurify']; // Exclude from bundling and dependency optimization
+
 // https://vite.dev/config/
 export default defineConfig({
     base: "/little-gitster-girl",
     build: {
       sourcemap: true,
+      rollupOptions: {
+        external: externalLibs,
+      },
+    },
+    optimizeDeps: {
+      exclude: externalLibs,
     },
     plugins: [
       !isSentryDisabled && sentryVitePlugin({
