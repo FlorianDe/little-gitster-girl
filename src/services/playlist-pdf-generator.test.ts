@@ -1,5 +1,7 @@
 // MIGRATION GUIDE JEST -> VITEST: https://vitest.dev/guide/migration
 import { describe, it, vi } from 'vitest'
+import fs from 'fs';
+import path from 'path';
 
 // import 'jest-canvas-mock';
 import { ExternalUrls, Image } from '@spotify/web-api-ts-sdk';
@@ -167,7 +169,13 @@ describe('Generate pdf file', async () => {
         const pdf = await generatePdf(generatedPlaylists, async ({ progress, section }) => {
             console.log(`${section} : ${progress}% - ${new Date().toLocaleString('de')}`);
         });
-        pdf.save('generate.pdf');
+
+        const folderPath = path.join(process.cwd(), 'generated');
+        const filePath = path.join(folderPath, 'generate.pdf');
+        if (!fs.existsSync(folderPath)) {
+            fs.mkdirSync(folderPath, { recursive: true });
+        }
+        pdf.save(filePath);
       })
 
 });

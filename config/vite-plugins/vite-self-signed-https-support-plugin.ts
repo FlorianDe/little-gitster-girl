@@ -15,7 +15,7 @@ type SelfSignedHttpsSupportPluginOptions = {
 type SelfSignedServerCertificate =  Pick<ServerOptions, 'key' | 'cert'>;
 const defaultResolveServerCertificate: ResolveServerCertificateFn = () => {
   try{
-    const certDir = path.resolve(process.cwd(), 'certs'); 
+    const certDir = path.resolve(process.cwd(), 'generated/certs'); 
     return {
       key: fs.readFileSync(path.resolve(certDir, 'private.key')),
       cert: fs.readFileSync(path.resolve(certDir, 'certificate.crt')),
