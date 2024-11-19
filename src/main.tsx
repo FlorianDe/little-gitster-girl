@@ -2,7 +2,7 @@
 
 import { sentryCreateBrowserRouter } from './services/sentry-service';
 
-import React, { Suspense } from 'react'
+import { Suspense, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom';
 
@@ -59,15 +59,15 @@ const router = sentryCreateBrowserRouter(
 
 //using react 17 because of --> https://community.spotify.com/t5/Spotify-for-Developers/Spotify-Web-Playback-SDK-example-playback-buttons-don-t-work/td-p/5516960?hwSuccess=1682633176302
 createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <SpotifyAuthProvider>
-            <SpotifyPlayerContextProvider>
-                <TranslationProvider>
+    <StrictMode>
+        <TranslationProvider>
+            <SpotifyAuthProvider>
+                <SpotifyPlayerContextProvider>
                     <ToastProvider>
                         <RouterProvider router={router} />
                     </ToastProvider>
-                </TranslationProvider>
-            </SpotifyPlayerContextProvider>
-        </SpotifyAuthProvider>
-    </React.StrictMode>
+                </SpotifyPlayerContextProvider>
+            </SpotifyAuthProvider>
+        </TranslationProvider>
+    </StrictMode>
 );

@@ -7,7 +7,7 @@ export type SpotifyAuthContextType = {
     user: UserProfile | null;
     authenticate: () => Promise<void>;
     logOut: () => Promise<void>;
-    error: Error | null;
+    error: Error | string | null;
     isCheckingAuthentication: boolean;
 };
 
