@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { flushSync } from 'react-dom';
-import { Page, PlaylistedTrack } from '@spotify/web-api-ts-sdk';
+import type { Page, PlaylistedTrack } from '@spotify/web-api-ts-sdk';
 
 import PlaylistComponent from '../components/PlaylistComponent';
 import LoadingOverlay from '../components/LoadingOverlayView';

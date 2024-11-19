@@ -1,4 +1,4 @@
-import { UserProfile, Image } from '@spotify/web-api-ts-sdk';
+import type { UserProfile, Image } from '@spotify/web-api-ts-sdk';
 import React from 'react';
 
 import './SpotifyUserInfo.css'

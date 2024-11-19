@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { Page, SpotifyApi, UserProfile } from '@spotify/web-api-ts-sdk';
+import type { Page, SpotifyApi, UserProfile } from '@spotify/web-api-ts-sdk';
 
 import { useTranslation } from '../i18n';
 import { SimplifiedPlaylistTracksRequired } from '../types/Spotify';

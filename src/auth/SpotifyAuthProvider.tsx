@@ -6,8 +6,8 @@ import {
     AuthorizationCodeWithPKCEStrategy,
     UserProfile,
 } from '@spotify/web-api-ts-sdk';
-
 import { SpotifyAuthContext } from './SpotifyAuthContext';
+import { useTranslation } from '../i18n';
 
 const DEFAULT_SCOPES = [...Scopes.userDetails, ...Scopes.userPlayback, ...Scopes.playlistRead];
 const DEFAULT_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID!;
@@ -30,25 +30,36 @@ export const SpotifyAuthProvider: React.FC<{
     } = spotifyConfig ?? {};
 
     const [sdk, setSdk] = useState<SpotifyApi | null>(null);
-    const [error, setError] = useState<Error | null>(null);
+    const [error, setError] = useState<Error | string | null>(null);
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
     const [user, setUser] = useState<UserProfile | null>(null);
     const { current: activeScopes } = useRef(scopes);
     const [isCheckingAuthentication, setIsCheckingAuthentication] = useState<boolean>(true);
-
+    const {t} = useTranslation();
 
     const authenticateManual = async (sdk: SpotifyApi) => {
         try {
             const { authenticated } = await sdk.authenticate();
             if (authenticated) {
                 setSdk(sdk);
-                const user = await sdk.currentUser.profile();
-                setUser(user);
-                setIsAuthenticated(true);
+                try {
+                    const user = await sdk.currentUser.profile();
+                    if(user){
+                        setUser(user);
+                        setIsAuthenticated(true);
+                    }
+                } catch(error){
+                    if (error instanceof Error) {
+                        if (error.message.includes('Check settings on developer.spotify.com/dashboard, the user may not be registered.')) {
+                            setError(t('userNotAddedToTheSpotifyAppError'));
+                        } else {
+                          console.error('An unexpected error occurred:', error.message);
+                        }
+                    }
+                }
             }
         } catch (e: Error | unknown) {
             const error = e as Error;
-            setError(error);
             if (error?.message?.includes('No verifier found in cache')) {
                 console.error(
                     'If you are seeing this error in a React Development Environment, it’s because React calls useEffect twice. This will not impact your production applications or anything running outside of Strict Mode.',
@@ -56,6 +67,7 @@ export const SpotifyAuthProvider: React.FC<{
                 );
             } else {
                 console.error('Authentication failed:', e);
+                setError(error);
             }
         }
     };
@@ -87,8 +99,6 @@ export const SpotifyAuthProvider: React.FC<{
     const authenticate = useCallback(async () => {
         if (sdk) {
             await authenticateManual(sdk);
-        } else {
-            setError(new Error('SDK is not initialized'));
         }
     }, [sdk]);
 

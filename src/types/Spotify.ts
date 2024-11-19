@@ -1,4 +1,4 @@
-import { TrackReference, SimplifiedAlbum, SimplifiedShow, Track, Episode, SimplifiedPlaylist, Image } from '@spotify/web-api-ts-sdk';
+import type { TrackReference, SimplifiedAlbum, SimplifiedShow, Track, Episode, SimplifiedPlaylist, Image } from '@spotify/web-api-ts-sdk';
 
 export type SimplifiedPlaylistTracksRequired = Omit<SimplifiedPlaylist, "images"> & {
     tracks: TrackReference;

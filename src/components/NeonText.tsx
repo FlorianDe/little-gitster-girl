@@ -1,5 +1,5 @@
 import React from 'react';
-import './NeonText.css';
+import neonTextStyles from './NeonText.css?raw';
 
 interface NeonTitleProps {
     style?: React.CSSProperties;
@@ -7,9 +7,12 @@ interface NeonTitleProps {
 }
 const NeonTitle: React.FC<NeonTitleProps> = (props) => {
     return (
-        <div className="neon-container" style={props.style}>
-            <h1 className="neon-text">{props.text}</h1>
-        </div>
+        <>
+            <style>{neonTextStyles}</style>
+            <div className={"neon-container"} style={props.style}>
+                <h1 className={"neon-text"}>{props.text}</h1>
+            </div>
+        </>
     );
 };
 

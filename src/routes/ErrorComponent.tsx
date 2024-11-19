@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useRouteError } from "react-router-dom";
-import * as Sentry from "@sentry/react";
+import { captureException as sentryCaptureException } from "@sentry/react";
 
 import { useTranslation } from '../i18n';
 
@@ -9,7 +9,7 @@ const ErrorComponent: React.FC = () => {
     const error = useRouteError() as Error;
 
     React.useEffect(() => {
-      Sentry.captureException(error);
+        sentryCaptureException(error);
     }, [error]);
     
     const {t} = useTranslation();

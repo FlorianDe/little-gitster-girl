@@ -64,11 +64,6 @@
     --button-text-color: #ffffff;
 }
 
-@font-face {
-    font-family: Neon;
-    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-}
-
 * {
     margin: 0;
     padding: 0;

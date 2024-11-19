@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import {
   createBrowserRouter,
   createRoutesFromChildren,
@@ -6,15 +6,31 @@ import {
   useLocation,
   useNavigationType,
 } from "react-router-dom";
+import { 
+  reactRouterV6BrowserTracingIntegration, 
+  wrapCreateBrowserRouter, 
+  BrowserClient, 
+  makeFetchTransport, 
+  defaultStackParser, 
+  getCurrentScope ,
+  breadcrumbsIntegration,
+  globalHandlersIntegration,
+  linkedErrorsIntegration,
+  dedupeIntegration
+} from "@sentry/react";
 
-import * as Sentry from "@sentry/react";
-
-Sentry.init({
+const client = new BrowserClient({
   dsn: import.meta.env.VITE_SENTRY_DSN,
   environment: import.meta.env.MODE,
+  transport: makeFetchTransport,
+  stackParser: defaultStackParser,
   integrations: [
-    Sentry.reactRouterV6BrowserTracingIntegration({
-      useEffect: React.useEffect,
+    breadcrumbsIntegration(),
+    globalHandlersIntegration(),
+    linkedErrorsIntegration(),
+    dedupeIntegration(),
+    reactRouterV6BrowserTracingIntegration({
+      useEffect: useEffect,
       useLocation,
       useNavigationType,
       createRoutesFromChildren,
@@ -23,5 +39,7 @@ Sentry.init({
   ],
 });
 
-export const sentryCreateBrowserRouter =
-  Sentry.wrapCreateBrowserRouter(createBrowserRouter);
+getCurrentScope().setClient(client);
+client.init();
+
+export const sentryCreateBrowserRouter = wrapCreateBrowserRouter(createBrowserRouter);
