@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { flushSync } from 'react-dom';
 import type { Page, PlaylistedTrack } from '@spotify/web-api-ts-sdk';
 
 import PlaylistComponent from '../components/PlaylistComponent';
 import LoadingOverlay from '../components/LoadingOverlayView';
-import { generatePdf } from '../services/playlist-pdf-generator';
+// import { generatePdf } from '../services/playlist-pdf-generator';
 import { MainContentWrapper } from '../components/MainContentWrapper';
 import { useSpotifyAuth } from '../auth';
 import { useTranslation } from '../i18n';
 import { PlaylistWithTracks, SimplifiedPlaylistTracksRequired } from '../types/Spotify';
+import { usePdfGenerationWorker } from '../worker/pdf-generation-worker/hooks';
 
 const GenerateCodes: React.FC = () => {
     const {t} = useTranslation();
@@ -19,6 +19,7 @@ const GenerateCodes: React.FC = () => {
     const [, setGenerationError] = useState<string | null>(null); //TODO: Use the generation error
     const [progress, setProgress] = useState<number>(0);
     const [progressSection, setProgressSection] = useState<string | null>(null);
+    const {generatePdf} = usePdfGenerationWorker();
 
     const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -84,22 +85,22 @@ const GenerateCodes: React.FC = () => {
             setProgress(0);
         }
 
-        let oldSection: string | null = null;
-        const pdf = await generatePdf(playlistsWithTracks, async ({ section, progress }) => {
-            // setProgress((_) => progress)
-            if (oldSection !== section) {
-                oldSection = section;
-                flushSync(() => setProgressSection(section));
-                // setProgressSection((_) => section)
-                await delay(500);
-            }
-            flushSync(() => setProgress(progress));
-        });
+        const pdfBlob = await generatePdf({payload: {playlists: playlistsWithTracks}, onProgress: async ({section, progress}) => {
+            setProgressSection((prevSection) => (prevSection !== section ? section : prevSection));
+            setProgress(progress);
+        }});
 
-        const pdfBlob = pdf.output('blob');
         const pdfUrl = URL.createObjectURL(pdfBlob);
-        window.open(pdfUrl);
-
+        const popup = window.open(pdfUrl);
+        if (!popup) {
+            // If the popup is blocked, fallback to download
+            console.warn("Popup blocked, initiating download fallback.");
+            const documentName = `${new Date().toISOString().slice(0, 19).replace('T', '_').replace(/:/g, '_').replace(/-/g, '_')}}_${import.meta.env.VITE_APP_NAME.replace(" ", "_")}.pdf`;
+            const anchor = document.createElement("a");
+            anchor.href = pdfUrl;
+            anchor.download = documentName;
+            anchor.click();
+        }
         setIsGenerating(false);
     };
 
