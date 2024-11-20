@@ -1,7 +1,7 @@
 import { jsPDF, TextOptionsLight } from 'jspdf';
 import qrcode from 'qrcode-generator';
 
-import { PlaylistWithTracks, ReducedEpisode, ReducedPlaylistedTrack, ReducedSimplifiedAlbum, ReducedTrack, ReducedTrackItem } from '../types/Spotify';
+import { PlaylistWithTracks, ReducedPlaylistedTrack, ReducedSimplifiedAlbum, ReducedTrack, ReducedTrackItem } from '../types/Spotify';
 
 
 function generateYearLinePlotData(years: number[]): Record<number, number> {
@@ -100,14 +100,11 @@ export const calculateInfoAndStats = (playlists: Array<PlaylistWithTracks>) => {
     function isTrack(trackItem: ReducedPlaylistedTrack<ReducedTrackItem>): trackItem is ReducedPlaylistedTrack<ReducedTrack> {
         return trackItem.track.type === 'track' || 'album' in trackItem.track;
     }
-
-    function isEpisode(trackItem: ReducedPlaylistedTrack<ReducedTrackItem>): trackItem is ReducedPlaylistedTrack<ReducedEpisode> {
-        return trackItem.track.type === 'episode' || 'show' in trackItem.track;
-    }
-
     const allTracks: ReducedPlaylistedTrack<ReducedTrack>[] = allTracksAndEpisodes.filter(isTrack);
-    const allEpisodes: ReducedPlaylistedTrack<ReducedEpisode>[] = allTracksAndEpisodes.filter(isEpisode);
-    console.log(`${allEpisodes?.length} found!`)
+    // function isEpisode(trackItem: ReducedPlaylistedTrack<ReducedTrackItem>): trackItem is ReducedPlaylistedTrack<ReducedEpisode> {
+    //     return trackItem.track.type === 'episode' || 'show' in trackItem.track;
+    // }
+    // const allEpisodes: ReducedPlaylistedTrack<ReducedEpisode>[] = allTracksAndEpisodes.filter(isEpisode);
 
     const allUniqueTracks = allTracks.reduce<Record<string, ReducedPlaylistedTrack<ReducedTrack>>>((acc, cur) => {
         acc[cur.track.id] = cur;

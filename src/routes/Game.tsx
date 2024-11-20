@@ -12,6 +12,9 @@ import { isSpotifyError } from '../services/spotify-helper';
 import './Game.css';
 import { useTranslation } from '../i18n';
 import { ArtworkImage, createArtworkTitleImage } from '../paintings/title-image';
+import Equalizer from '../components/Equalizer';
+import PlayPauseButton from '../components/PlayPauseButton';
+import AbsoluteCenterWrapper from '../components/AbsoluteCenterWrapper';
 
 function Game() {
     const {t} = useTranslation();
@@ -190,17 +193,24 @@ function Game() {
                             onStopScanning={handleStopScanning}
                         />
                         {!qrScanningStarted && (
-                            <div
-                                className={`play-pause-btn ${isPaused ? 'paused' : 'playing'}`}
-                                onClick={togglePlayPause}
-                            >
-                                <div className="icon"></div>
-                            </div>
+                            <>
+                            <Equalizer state={isPaused ? 'paused' : 'playing'}/>
+                            <AbsoluteCenterWrapper 
+                                className={`play-pause-btn-wrapper ${isPaused ? "paused" : "playing"}`}
+                                >
+                                <PlayPauseButton 
+                                    wrapperStyle={{backgroundColor: "var(--background-color)", borderRadius: "50%", zIndex: 2 }}
+                                    style={{height: "100px", width: "100px", color: "var(--accent-color)"}}
+                                    isPaused={isPaused} onClick={togglePlayPause}
+                                />
+                            </AbsoluteCenterWrapper>
+                            </>
                         )}
                     </div>
                     <div className="game-main-section__next-song-btn">
                         <button onClick={scanNextSong}>{qrScanningStarted ? t("stopScanning") : t("scanNextSong")}</button>
                     </div>
+                    
                 </div>
             {/* )} */}
         </div>

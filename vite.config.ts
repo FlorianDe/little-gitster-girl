@@ -48,4 +48,10 @@ export default defineConfig({
       port: 3000,
       strictPort: true
     },
+    worker: {
+      format: 'es',
+      rollupOptions: {
+        external: externalLibs,
+      },
+    }
   });
