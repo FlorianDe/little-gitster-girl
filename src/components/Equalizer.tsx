@@ -16,14 +16,14 @@ const Equalizer: React.FC<EqualizerProps> = ({ state, amountOfBars = 10, desired
   const generateNextHeights = (prevHeights: number[]): number[] => {
     const decay = 0.90;
     const peakChance = 0.2;
-    const maxVariance = 30;
+    const maxVariance = 0.30;
   
     return prevHeights.map((height) => {
       const isPeak = Math.random() < peakChance;
       const newHeight = isPeak
-        ? Math.random() * 100
+        ? Math.random()
         : height * decay + (Math.random() * maxVariance - maxVariance / 2);
-      return Math.max(0, Math.min(100, newHeight));
+      return Math.max(0, Math.min(1, newHeight));
     });
   };
 
@@ -58,7 +58,11 @@ const Equalizer: React.FC<EqualizerProps> = ({ state, amountOfBars = 10, desired
     <div className="equalizer-container">
       <div className="equalizer-bars bars-top">
         {bars.map((height, index) => (
-          <div key={index} className={`equalizer-bar top ${state}`} style={{ height: `${height}%` }} />
+          <div 
+            key={index} 
+            className={`equalizer-bar top ${state}`} 
+            style={{ transform: `scaleY(${height})` }} 
+          />
         ))}
       </div>
 
@@ -67,7 +71,7 @@ const Equalizer: React.FC<EqualizerProps> = ({ state, amountOfBars = 10, desired
           <div
             key={index}
             className={`equalizer-bar reflection ${state}`}
-            style={{ height: `${height}%` }}
+            style={{ transform: `scaleY(${height})`  }}
           />
         ))}
       </div>

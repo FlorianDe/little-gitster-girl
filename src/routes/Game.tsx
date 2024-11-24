@@ -60,12 +60,6 @@ function Game() {
                         )
                         // eslint-disable-next-line @typescript-eslint/no-unused-vars
                         .catch((_e) => showToast(t("toastTransferPlaybackError"), 'error'));
-
-                    const repeatMode = 'track';
-                    if (playbackState?.repeat_state !== repeatMode) {
-                        console.log("Setting repeat mode to:", repeatMode)
-                        await spotifySdk.player.setRepeatMode(repeatMode, id);
-                    }
                 } else {
                     console.log('The player is already active!');
                 }
@@ -114,6 +108,13 @@ function Game() {
                     try {
                         //https://developer.spotify.com/documentation/web-playback-sdk/reference#spotifyplayeractivateelement
                         await spotifySdk.player.startResumePlayback(device_id, undefined, uris);
+
+                        //TODO: If needed, set repeatMode to track! 
+                        // const repeatMode = 'track';
+                        // if (playbackState?.repeat_state !== repeatMode) {
+                        //     console.log("Setting repeat mode to:", repeatMode)
+                        //     await spotifySdk.player.setRepeatMode(repeatMode, id);
+                        // }
                     } catch (error) {
                         if (isSpotifyError(error)) {
                             console.error('Error starting playback:', error.message);
