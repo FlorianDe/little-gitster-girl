@@ -29,3 +29,6 @@ dist-ssr
 
 playground
 generated
+
+public
+!public/favicon.svg

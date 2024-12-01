@@ -7,16 +7,16 @@ interface EqualizerProps {
   desiredFps?: number;
 }
 
-const Equalizer: React.FC<EqualizerProps> = ({ state, amountOfBars = 10, desiredFps = 24, }) => {
+const Equalizer: React.FC<EqualizerProps> = ({ state, amountOfBars = 10, desiredFps = 20, }) => {
   const [bars, setBars] = useState<number[]>(new Array(amountOfBars).fill(0));
 
   const animationRef = useRef<number | null>(null);
   const lastTimestampRef = useRef<number>(0);
 
   const generateNextHeights = (prevHeights: number[]): number[] => {
-    const decay = 0.90;
-    const peakChance = 0.2;
-    const maxVariance = 0.30;
+    const decay = 0.95;
+    const peakChance = 0.1;
+    const maxVariance = 0.2;
   
     return prevHeights.map((height) => {
       const isPeak = Math.random() < peakChance;

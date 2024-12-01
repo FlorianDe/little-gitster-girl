@@ -1,4 +1,14 @@
-<svg viewBox="0 0 64 64" width="64" height="64" color="white" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        path, circle {
+            color: #fff
+        }
+        @media (prefers-color-scheme: light) {
+            path, circle {
+                color: #000;
+            }
+        }
+    </style>
     <defs>
         <g id="n">
             <path d="M0 0 a8 6 -25 1 1-1-1" fill="currentColor"/>

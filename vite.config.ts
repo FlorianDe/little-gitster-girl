@@ -3,10 +3,10 @@ import react from "@vitejs/plugin-react";
 import process from "node:process";
 import { defineConfig, loadEnv } from "vite";
 import { VitePWA } from 'vite-plugin-pwa'
-import { minimal2023Preset } from '@vite-pwa/assets-generator/config'
 import { visualizer } from "rollup-plugin-visualizer";
 import { displayNetworkUrlWithHostnamePlugin } from './config/vite-plugins/vite-display-network-url-hostname-plugin';
 import { selfSignedHttpsSupportPlugin } from './config/vite-plugins/vite-self-signed-https-support-plugin';
+import { pwaImageGenPlugin } from './config/vite-plugins/vite-pwa-image-gen-plugin';
 
 const isSentryDisabled = !(process.env.SENTRY_PLUGIN_ENABLED == "true")
 
@@ -46,7 +46,29 @@ export default ({ mode }: {mode: never}) => {
         react(),
         displayNetworkUrlWithHostnamePlugin(),
         selfSignedHttpsSupportPlugin(),
+        pwaImageGenPlugin({
+          outputDir: "public",
+          images: [
+            {
+              path: "assets/logo_512x512.png",
+              transparent: {
+                sizes: [64, 192, 512],
+              },
+              maskable: {
+                sizes: [512],
+              },
+              apple: {
+                sizes: [180],
+              },
+            },
+          ],
+          favicon: {
+            path: "public/favicon.svg",
+            size: 48,
+          },
+        }),
         VitePWA({
+          registerType: "autoUpdate",
           includeAssets: ['favicon.svg'],
           manifest: {
             "short_name": VITE_APP_NAME,
@@ -80,11 +102,7 @@ export default ({ mode }: {mode: never}) => {
             "theme_color": "#000000",
             "background_color": "#ffffff"
           },
-          pwaAssets: {
-            preset: minimal2023Preset,
-            disabled: false
-            // image: "public/imgs/android_512x512.png"
-          }
+          includeManifestIcons: true,
         })
       ],
       preview: {
