@@ -159,7 +159,7 @@ export const defaultPngOptions: Record<
     resizeOptions: { fit: "contain", background: "white" },
   },
   apple: {
-    padding: 0.3,
+    padding: 0.04,
     resizeOptions: { fit: "contain", background: "white" },
   },
 };
