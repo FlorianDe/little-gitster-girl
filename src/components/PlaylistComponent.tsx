@@ -33,13 +33,14 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
     const [hasMore, setHasMore] = useState<boolean>(true);
     const [selectedPlaylists, setSelectedPlaylists] = useState<string[]>([]);
     const [isSelectionMode, setSelectionMode] = useState<boolean>(false);
+    const [errorFetching, setErrorFetching] = useState<Error | null>(null);
 
     const loader = useRef<HTMLDivElement | null>(null);
     const limit = 10; // Set a reasonable limit for each batch
 
     // Function to fetch user playlists, memoized to prevent re-creating on every render
     const loadPlaylists = useCallback(async () => {
-        if (loading || !hasMore || !spotifySdk || !isAuthenticated) return; // Prevent fetching if already loading or no more items
+        if (loading || !hasMore || !spotifySdk || !isAuthenticated || errorFetching) return; // Prevent fetching if already loading or no more items
 
         setLoading(true);
         // Test loading
@@ -56,17 +57,24 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
 
             const data: Page<SimplifiedPlaylistTracksRequired> = await response.json();
 
+            //Spotify broke the API (https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api)
+            // 8. Algorithmic and Spotify-owned editorial playlists
+            // fetching playlists can now result in items being null inside the returned array...
+            const filteredItems = data.items.filter(playlist => playlist !== null && ("id" in playlist));
+            
             // Update playlists state and pagination
-            const newItems = Object.fromEntries(data.items.map((item) => [item.id, item]));
+            const newItems = Object.fromEntries(filteredItems.map((item) => [item.id, item]));
             setPlaylists((prev) => ({ ...prev, ...newItems }));
             setHasMore(data.next !== null); // If next is null, there's no more data
             setOffset((prev) => prev + data.items.length); // Update offset for pagination
-        } catch (error) {
+        } catch (e) {
+            const error = e as Error;
             console.error('Error fetching playlists:', error);
+            setErrorFetching(error);
         } finally {
             setLoading(false); // Ensure loading is reset even on failure
         }
-    }, [loading, hasMore, spotifySdk, offset, isAuthenticated]); // Depend on relevant states including offset
+    }, [loading, hasMore, spotifySdk, offset, isAuthenticated, errorFetching]); // Depend on relevant states including offset
 
     // TODO: Bug with StrictMode in React18!
     // Initial loading of playlists when sdk is ready
