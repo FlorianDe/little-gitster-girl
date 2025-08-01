@@ -15,22 +15,22 @@
     "generate-certs": "mkdir -p generated/certs && openssl genpkey -algorithm RSA -out generated/certs/private.key -pkeyopt rsa_keygen_bits:2048 && openssl req -new -key generated/certs/private.key -out generated/certs/csr.csr -subj \"/CN=localhost\" && openssl x509 -req -in generated/certs/csr.csr -signkey generated/certs/private.key -out generated/certs/certificate.crt -days 365"
   },
   "dependencies": {
-    "@sentry/react": "^8.36.0",
+    "@sentry/react": "^10.0.0",
     "@spotify/web-api-ts-sdk": "^1.2.0",
     "@types/subset-font": "^2.3.0",
-    "jspdf": "^2.5.2",
+    "jspdf": "^3.0.1",
     "qr-scanner": "^1.4.2",
-    "qrcode-generator": "^1.4.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "qrcode-generator": "^2.0.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.7.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@sentry/vite-plugin": "^2.22.6",
     "@types/node": "^22.8.7",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
     "@types/spotify-web-playback-sdk": "^0.1.19",
     "@vitejs/plugin-react": "^4.3.3",
     "eslint": "^9.13.0",
