@@ -7,6 +7,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { displayNetworkUrlWithHostnamePlugin } from './config/vite-plugins/vite-display-network-url-hostname-plugin';
 import { selfSignedHttpsSupportPlugin } from './config/vite-plugins/vite-self-signed-https-support-plugin';
 import { pwaImageGenPlugin } from './config/vite-plugins/vite-pwa-image-gen-plugin';
+import {fontSubsetPlugin} from './config/vite-plugins/vite-custom-font-subset-base64';
 
 const isSentryDisabled = !(process.env.SENTRY_PLUGIN_ENABLED == "true")
 
@@ -44,6 +45,16 @@ export default ({ mode }: {mode: never}) => {
           filename: "generated/analyse.html",
         }),
         react(),
+        fontSubsetPlugin({
+          fontPath: "./assets/fonts/NEONLEDLightRegular.ttf",
+          subsetChars: Array.from(new Set(VITE_APP_NAME.toUpperCase().split(""))).join(""),
+          fontFaceOptions: {
+            fontFamily: "NEON LED Light",
+          },
+          injection: {
+            type: "inject"
+          }
+        }),
         displayNetworkUrlWithHostnamePlugin(),
         selfSignedHttpsSupportPlugin(),
         pwaImageGenPlugin({
