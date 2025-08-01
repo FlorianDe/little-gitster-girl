@@ -177,6 +177,9 @@ type PWAImageGenPluginProps = {
     apple?: {
       sizes: Array<AssetSize>;
     };
+    options?: Partial<
+      Record<ImageKind, { padding: number; resizeOptions: ResizeOptions }>
+    >;
   }>;
   favicon?: {
     path: string;
@@ -216,6 +219,7 @@ const generateImages = async (props: PWAImageGenPluginProps) => {
   if (favicon) {
     const { path, size } = favicon;
     const img = await imageResolver(path);
+    //TODO FlorianDe: Check which options to parse instead of using defaultPngOptions
     const image = await generateTransparentAsset("png", img, size, {
       outputOptions: { compressionLevel: 9, quality: 60 },
       padding: defaultPngOptions["transparent"].padding,
@@ -232,12 +236,16 @@ const generateImages = async (props: PWAImageGenPluginProps) => {
     );
   }
 
-  for (const imgOptions of images) {
-    const { path } = imgOptions;
+  for (const imgProps of images) {
+    const { path, options } = imgProps;
+    const imgOptions = {
+      ...defaultPngOptions,
+      ...(options ?? {})
+    }
     const img = await imageResolver(path);
 
     for (const imgKind of ImageKinds) {
-      const container = imgOptions[imgKind];
+      const container = imgProps[imgKind];
       const resolvedTransparents = await Promise.all(
         container?.sizes.map(async (size) => {
           const generateAssetFn =
@@ -248,8 +256,8 @@ const generateImages = async (props: PWAImageGenPluginProps) => {
           const imageFileName = defaultFileNameResolver(imgKind, size, imgType);
           const image = await generateAssetFn(imgType, img, size, {
             outputOptions: { compressionLevel: 9, quality: 60 },
-            padding: defaultPngOptions[imgKind].padding,
-            resizeOptions: defaultPngOptions[imgKind].resizeOptions,
+            padding: imgOptions[imgKind].padding,
+            resizeOptions: imgOptions[imgKind].resizeOptions,
           });
 
           return {
@@ -279,24 +287,22 @@ const generateImages = async (props: PWAImageGenPluginProps) => {
 export function pwaImageGenPlugin(props: PWAImageGenPluginProps): Plugin {
   return {
     name: "pwa-image-gen-display",
-    enforce: 'pre',
-    apply: 'build',
+    enforce: "pre",
+    apply: "build",
     async buildStart() {
       await generateImages(props);
     },
     async generateBundle() {
-      
       // const outDir = this.meta.watchMode
       //   ? 'dist'
       //   : (this.getOption('outDir') as string) ?? 'dist';
-
       // Optional: Emit file to ensure it is tracked in Vite's build pipeline
       // this.emitFile({
       //   type: 'asset',
       //   fileName: 'images/example-image.png',
       //   source: imageContent,
       // });
-    }
+    },
   };
 }
 

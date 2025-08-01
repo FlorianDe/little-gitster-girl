@@ -16,7 +16,6 @@
     font-weight: 200;
     color: var(--neon-text-color);
     font-family: 'NEON LED Light', sans-serif;
-    font-display: swap;
     text-transform: uppercase;
     padding: calc(var(--base-font-size) * 0.45) calc(var(--base-font-size) * 0.5) calc(var(--base-font-size) * 0.35)
         calc(var(--base-font-size) * 0.5);
