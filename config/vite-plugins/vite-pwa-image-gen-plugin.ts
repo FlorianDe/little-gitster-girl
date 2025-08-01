@@ -64,9 +64,9 @@ export async function createSharp<OutputType extends GenerateOptionsType>(
   type: OutputType,
   image: Parameters<typeof sharp>[0],
   size: AssetSize,
-  background: sharp.Color,
+  background: sharp.Colour,
   options?: GenerateOptionsOptionType<OutputType>,
-  channels: sharp.Channels = 4
+  channels: sharp.CreateChannels = 4
 ): Promise<sharp.Sharp> {
   const { padding = 0, resizeOptions, outputOptions } = options ?? {};
 

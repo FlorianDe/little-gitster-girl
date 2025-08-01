@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import { 
   reactRouterV6BrowserTracingIntegration, 
-  wrapCreateBrowserRouter, 
+  wrapCreateBrowserRouterV7,
   BrowserClient, 
   makeFetchTransport, 
   defaultStackParser, 
@@ -42,4 +42,4 @@ const client = new BrowserClient({
 getCurrentScope().setClient(client);
 client.init();
 
-export const sentryCreateBrowserRouter = wrapCreateBrowserRouter(createBrowserRouter);
+export const sentryCreateBrowserRouter = wrapCreateBrowserRouterV7(createBrowserRouter);
