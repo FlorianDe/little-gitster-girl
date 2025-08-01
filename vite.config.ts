@@ -58,8 +58,14 @@ export default ({ mode }: {mode: never}) => {
                 sizes: [512],
               },
               apple: {
-                sizes: [180],
+                sizes: [512],
               },
+              options: {
+                maskable: {
+                  padding: 0.0,
+                  resizeOptions: { fit: "contain", background: "white" },
+                },
+              }
             },
           ],
           favicon: {
