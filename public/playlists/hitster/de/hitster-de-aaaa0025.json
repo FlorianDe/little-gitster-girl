@@ -1,0 +1,926 @@
+{
+  "00001": {
+    "title": "You Came",
+    "artist": "Kim Wilde",
+    "spotifyId": "4EA4ybyDidKtkER5IhasZe",
+    "year": "1988"
+  },
+  "00002": {
+    "title": "Sweet Dreams",
+    "artist": "La Bouche",
+    "spotifyId": "2wz5weI4PREzpexKfrKgwv",
+    "year": "1994"
+  },
+  "00003": {
+    "title": "Love And Marriage",
+    "artist": "Frank Sinatra",
+    "spotifyId": "2kKvwBX4Qsn1CpbqjtNyad",
+    "year": "1955"
+  },
+  "00004": {
+    "title": "Twistin' the Night Away",
+    "artist": "Sam Cooke",
+    "spotifyId": "7FS541dJh3iQAEXEZoDhE6",
+    "year": "1962"
+  },
+  "00005": {
+    "title": "Heavy Cross",
+    "artist": "Gossip",
+    "spotifyId": "4N6R6yqkFUTyF3AYOdR0T7",
+    "year": "2009"
+  },
+  "00006": {
+    "title": "Cat's in the Cradle",
+    "artist": "Harry Chapin",
+    "spotifyId": "2obblQ6tcePeOEVJV6nEGD",
+    "year": "1974"
+  },
+  "00007": {
+    "title": "Fairytale Gone Bad",
+    "artist": "Sunrise Avenue",
+    "spotifyId": "38LgksKBjt5aes7nlOXPIL",
+    "year": "2006"
+  },
+  "00008": {
+    "title": "Maid of Orleans - Live",
+    "artist": "OMD",
+    "spotifyId": "0PLbIF1L8YYMyKhajNBWfW",
+    "year": "1981"
+  },
+  "00009": {
+    "title": "Fürstenfeld",
+    "artist": "S.T.S",
+    "spotifyId": "2n3ERDAyw57jX3iLZfADse",
+    "year": "1984"
+  },
+  "00010": {
+    "title": "Secret Love",
+    "artist": "Bee Gees",
+    "spotifyId": "6O7nMW8pIAk8m9ub6azaF9",
+    "year": "1991"
+  },
+  "00011": {
+    "title": "Centerfold",
+    "artist": "The J. Geils Band",
+    "spotifyId": "1ynmMEK1fkyiZ6Z6F3ThEt",
+    "year": "1981"
+  },
+  "00012": {
+    "title": "You Never Walk Alone",
+    "artist": "Mathou",
+    "spotifyId": "0HyAWcYFr2GfEvwDX2q3a4",
+    "year": "1992"
+  },
+  "00013": {
+    "title": "Ashes To Ashes",
+    "artist": "David Bowie",
+    "spotifyId": "1OYP05lTVheLYUanirbcTe",
+    "year": "1980"
+  },
+  "00014": {
+    "title": "Sweet but Psycho",
+    "artist": "Ava Max",
+    "spotifyId": "7DnAm9FOTWE3cUvso43HhI",
+    "year": "2018"
+  },
+  "00015": {
+    "title": "Nine Million Bicycles",
+    "artist": "Katie Melua",
+    "spotifyId": "0q1uLsz1YBitp0iRj8a4UG",
+    "year": "2005"
+  },
+  "00016": {
+    "title": "Alejandro",
+    "artist": "Lady Gaga",
+    "spotifyId": "3clsCV1f1E9u1Fge9ntulk",
+    "year": "2010"
+  },
+  "00017": {
+    "title": "What You're Proposing",
+    "artist": "Status Quo",
+    "spotifyId": "0EsVQ8w52MJCvYWuxpAnNV",
+    "year": "1980"
+  },
+  "00018": {
+    "title": "Suburbia",
+    "artist": "Pet Shop Boys",
+    "spotifyId": "3F4JxbEkur9ZXAtQ5GFVXB",
+    "year": "1986"
+  },
+  "00019": {
+    "title": "Adiemus",
+    "artist": "Karl Jenkins",
+    "spotifyId": "54CAG8n70kKVbFV6l1zF4G",
+    "year": "1995"
+  },
+  "00020": {
+    "title": "You Can Leave Your Hat On",
+    "artist": "Joe Cocker",
+    "spotifyId": "1x9iOd3K1JC6tdjGZJpFgZ",
+    "year": "1986"
+  },
+  "00021": {
+    "title": "Wake Me up When September Ends",
+    "artist": "Green Day",
+    "spotifyId": "3ZffCQKLFLUvYM59XKLbVm",
+    "year": "2004"
+  },
+  "00022": {
+    "title": "Mull Of Kintyre",
+    "artist": "Wings",
+    "spotifyId": "2eYjEQFSl43STOZZe86QgB",
+    "year": "1977"
+  },
+  "00023": {
+    "title": "Blaze Of Glory",
+    "artist": "Jon Bon Jovi",
+    "spotifyId": "0XwjdpwvEwukcg3XU4Ibzt",
+    "year": "1990"
+  },
+  "00024": {
+    "title": "Diamonds",
+    "artist": "Rihanna",
+    "spotifyId": "6O20JhBJPePEkBdrB5sqRx",
+    "year": "2012"
+  },
+  "00025": {
+    "title": "In Zaire",
+    "artist": "Johnny Wakelin",
+    "spotifyId": "2l6M2T0qbI74GXd7MqQhbw",
+    "year": "1976"
+  },
+  "00026": {
+    "title": "C’Mon Everybody",
+    "artist": "Eddie Cochran",
+    "spotifyId": "7ItZM6DMZE2m1X7yIaRxjq",
+    "year": "1958"
+  },
+  "00027": {
+    "title": "Nothing Breaks Like a Heart (feat. Miley Cyrus)",
+    "artist": "Mark Ronson",
+    "spotifyId": "27rdGxbavYJeBphck5MZAF",
+    "year": "2018"
+  },
+  "00028": {
+    "title": "Roar",
+    "artist": "Katy Perry",
+    "spotifyId": "27tNWlhdAryQY04Gb2ZhUI",
+    "year": "2013"
+  },
+  "00029": {
+    "title": "Jeans On",
+    "artist": "David Dundas",
+    "spotifyId": "2jxuI4zNuFKQfTryWQRq6M",
+    "year": "1976"
+  },
+  "00030": {
+    "title": "Kiss",
+    "artist": "Prince",
+    "spotifyId": "62LJFaYihsdVrrkgUOJC05",
+    "year": "1986"
+  },
+  "00031": {
+    "title": "Let Her Go",
+    "artist": "Passenger",
+    "spotifyId": "4bzBPrGYD3fQfAadLgIiwT",
+    "year": "2012"
+  },
+  "00032": {
+    "title": "If I Could Turn Back Time",
+    "artist": "Cher",
+    "spotifyId": "6mYrhCAGWzTdF8QnKuchXM",
+    "year": "1989"
+  },
+  "00033": {
+    "title": "Ham kummst Single",
+    "artist": "Seiler und Speer",
+    "spotifyId": "2Bh1bOO728itHij0vMBeHL",
+    "year": "2014"
+  },
+  "00034": {
+    "title": "You Can Get It If You Really Want",
+    "artist": "Desmond Dekker",
+    "spotifyId": "12rxrK9SZT9JDVf8WFyzsx",
+    "year": "1970"
+  },
+  "00035": {
+    "title": "Almost Lover",
+    "artist": "A Fine Frenzy",
+    "spotifyId": "4IwOkUNrbkZRGZmYeY7XOO",
+    "year": "2007"
+  },
+  "00036": {
+    "title": "Holding Out for a Hero",
+    "artist": "Bonnie Tyler",
+    "spotifyId": "3qE6p9fN4YeILT0cQcY1cD",
+    "year": "1984"
+  },
+  "00037": {
+    "title": "Powerless (Say What You Want)",
+    "artist": "Nelly Furtado",
+    "spotifyId": "4EdOyT1E50Nhnv6dGOmIT4",
+    "year": "2003"
+  },
+  "00038": {
+    "title": "You Shook Me All Night Long",
+    "artist": "AC/DC",
+    "spotifyId": "6yl8Es1tCYD9WdSkeVLFw4",
+    "year": "1980"
+  },
+  "00039": {
+    "title": "Nikita",
+    "artist": "Elton John",
+    "spotifyId": "3G0ENKW9vzV0SuYKaWFflI",
+    "year": "1985"
+  },
+  "00040": {
+    "title": "Beautiful Madness",
+    "artist": "Michael Patrick Kelly",
+    "spotifyId": "4tfLFDGypUWad5AT6772If",
+    "year": "2020"
+  },
+  "00041": {
+    "title": "Word Of Mouth",
+    "artist": "Mike + The Mechanics",
+    "spotifyId": "5hkDVHllJDgj4ynguaT2Ax",
+    "year": "1991"
+  },
+  "00042": {
+    "title": "The Riddle",
+    "artist": "Nik Kershaw",
+    "spotifyId": "6sn3FHCq2csvNkq2h9Au8V",
+    "year": "1984"
+  },
+  "00043": {
+    "title": "Angry",
+    "artist": "The Rolling Stones",
+    "spotifyId": "0daHbdrLvUmkh81rnolMcG",
+    "year": "2023"
+  },
+  "00044": {
+    "title": "Weus'd a Herz hast wia a Bergwerk",
+    "artist": "Rainhard Fendrich",
+    "spotifyId": "23EkZsgFWesLlXjqrHzbpx",
+    "year": "1983"
+  },
+  "00045": {
+    "title": "A Groovy Kind of Love",
+    "artist": "Phil Collins",
+    "spotifyId": "5OHUTC4EvTbL0DuZQRIGGX",
+    "year": "1988"
+  },
+  "00046": {
+    "title": "HALLO KLAUS (I wü zruck zu Dir) ZRUCK ZU DIR (Hallo Klaus) - Orginal '83 (weibliche Version)",
+    "artist": "Nickerbocker & Biene",
+    "spotifyId": "5OsHWD22P4lg2wP58C6mCw",
+    "year": "1982"
+  },
+  "00047": {
+    "title": "Hang on Sloopy",
+    "artist": "The McCoys",
+    "spotifyId": "36NX19wOQQEYyULfnuLnWc",
+    "year": "1965"
+  },
+  "00048": {
+    "title": "Cryin'",
+    "artist": "Aerosmith",
+    "spotifyId": "4t1fWWJQs5V9YErfsrDslC",
+    "year": "1993"
+  },
+  "00049": {
+    "title": "Paranoid",
+    "artist": "Black Sabbath",
+    "spotifyId": "3WC5LdwnX8zs2gyqgtXxS7",
+    "year": "1970"
+  },
+  "00050": {
+    "title": "I'm Walkin'",
+    "artist": "Fats Domino",
+    "spotifyId": "2gZlblsff9FKnhSIwB2ZsU",
+    "year": "1957"
+  },
+  "00051": {
+    "title": "The Night They Drove Old Dixie Down",
+    "artist": "Joan Baez",
+    "spotifyId": "0uHYplBhwLYey7f9qAmnSM",
+    "year": "1971"
+  },
+  "00052": {
+    "title": "Hey! Baby",
+    "artist": "Bruce Channel",
+    "spotifyId": "5ATFGyF7RbheJ76neYI55u",
+    "year": "1961"
+  },
+  "00053": {
+    "title": "Bello e impossibile",
+    "artist": "Gianna Nannini",
+    "spotifyId": "3dZHWv3IsAQLzAr7FLJoJA",
+    "year": "1986"
+  },
+  "00054": {
+    "title": "Wild World",
+    "artist": "Mr. Big",
+    "spotifyId": "4LxrmBgBLQc2oU60r6cBPW",
+    "year": "1993"
+  },
+  "00055": {
+    "title": "I'd Love You to Want Me",
+    "artist": "Lobo",
+    "spotifyId": "71CXzHYYOyNqgtVFpNdeCS",
+    "year": "1972"
+  },
+  "00056": {
+    "title": "Wuthering Heights",
+    "artist": "Kate Bush",
+    "spotifyId": "5YSI1311X8t31PBjkBG4CZ",
+    "year": "1978"
+  },
+  "00057": {
+    "title": "Sex on Fire",
+    "artist": "Kings of Leon",
+    "spotifyId": "0ntQJM78wzOLVeCUAW7Y45",
+    "year": "2008"
+  },
+  "00058": {
+    "title": "An guten Tagen",
+    "artist": "Johannes Oerding",
+    "spotifyId": "5UUtkgpCWxV9JtQP8iqOzy",
+    "year": "2019"
+  },
+  "00059": {
+    "title": "Love Is A Shield",
+    "artist": "Camouflage",
+    "spotifyId": "7IBff7ScohvP2pdfHR6YLE",
+    "year": "1989"
+  },
+  "00060": {
+    "title": "Bad",
+    "artist": "Michael Jackson",
+    "spotifyId": "3tS8q8SXxtrYSN8UgeQt6q",
+    "year": "1987"
+  },
+  "00061": {
+    "title": "Angels",
+    "artist": "Robbie Williams",
+    "spotifyId": "7CKbqqrs0AS1si1ZgaQdcj",
+    "year": "1997"
+  },
+  "00062": {
+    "title": "Ma Baker",
+    "artist": "Boney M.",
+    "spotifyId": "1BqnZOkYJbvYLOhN0qPJDm",
+    "year": "1977"
+  },
+  "00063": {
+    "title": "Eye of the Tiger",
+    "artist": "Survivor",
+    "spotifyId": "2HHtWyy5CgaQbC7XSoOb0e",
+    "year": "1982"
+  },
+  "00064": {
+    "title": "Higher Power",
+    "artist": "Coldplay",
+    "spotifyId": "0939D7aT18uBDS2MTjWzct",
+    "year": "2021"
+  },
+  "00065": {
+    "title": "Ballroom Blitz",
+    "artist": "Sweet",
+    "spotifyId": "6k6j3ZUljY1QLTMbc8VqB0",
+    "year": "1973"
+  },
+  "00066": {
+    "title": "This Flight Tonight",
+    "artist": "Nazareth",
+    "spotifyId": "1BmcaqiAwi3kbkCHNgSGuG",
+    "year": "1973"
+  },
+  "00067": {
+    "title": "Here I Am",
+    "artist": "Dominoe",
+    "spotifyId": "1IDeAs57vupiUdvMkceoqY",
+    "year": "1987"
+  },
+  "00068": {
+    "title": "Hello - Turn Your Radio On",
+    "artist": "Shakespears Sister",
+    "spotifyId": "28CbxqvoML43nJMU68VPx1",
+    "year": "1992"
+  },
+  "00069": {
+    "title": "Sunglasses At Night",
+    "artist": "Corey Hart",
+    "spotifyId": "1QbQL5m30YNvukitIqAnFG",
+    "year": "1983"
+  },
+  "00070": {
+    "title": "Frozen",
+    "artist": "Madonna",
+    "spotifyId": "2II03llydk4YnkBBvoYB3B",
+    "year": "1998"
+  },
+  "00071": {
+    "title": "Supergirl",
+    "artist": "Reamonn",
+    "spotifyId": "3FhNJaCNypOAnZccdYGAWN",
+    "year": "2000"
+  },
+  "00072": {
+    "title": "Lady In Black",
+    "artist": "Uriah Heep",
+    "spotifyId": "2U2ByqoO82fnayaPzO4x2d",
+    "year": "1971"
+  },
+  "00073": {
+    "title": "No Roots - Live from Spotify Berlin",
+    "artist": "Alice Merton",
+    "spotifyId": "5GsHS1Yfp3o0NzaJW9SQNQ",
+    "year": "2016"
+  },
+  "00074": {
+    "title": "Se bastasse una canzone",
+    "artist": "Eros Ramazzotti",
+    "spotifyId": "7dp45uA0Ws4TadWaMwdIRw",
+    "year": "1990"
+  },
+  "00075": {
+    "title": "Children",
+    "artist": "Robert Miles",
+    "spotifyId": "2lCrZBgfL1lrp7eOcIqReF",
+    "year": "1995"
+  },
+  "00076": {
+    "title": "A New Day Has Come",
+    "artist": "Céline Dion",
+    "spotifyId": "6LefIBy3hzTN6Yd1m81gpC",
+    "year": "2002"
+  },
+  "00077": {
+    "title": "The Winner Takes It All",
+    "artist": "ABBA",
+    "spotifyId": "3oEkrIfXfSh9zGnE7eBzSV",
+    "year": "1980"
+  },
+  "00078": {
+    "title": "If You Believe",
+    "artist": "Sasha",
+    "spotifyId": "4AstOWewI6yGeMh6ysWFCW",
+    "year": "1998"
+  },
+  "00079": {
+    "title": "Living To Love You - Single Version",
+    "artist": "Sarah Connor",
+    "spotifyId": "2mTHOerIGzhdTOm1pgW4kf",
+    "year": "2004"
+  },
+  "00080": {
+    "title": "I've Been Thinking About You",
+    "artist": "Londonbeat",
+    "spotifyId": "50PeqUz1BjMw9ayNTk5O4d",
+    "year": "1990"
+  },
+  "00081": {
+    "title": "Bad Day",
+    "artist": "Daniel Powter",
+    "spotifyId": "0mUyMawtxj1CJ76kn9gIZK",
+    "year": "2005"
+  },
+  "00082": {
+    "title": "Living Next Door to Alice",
+    "artist": "Smokie",
+    "spotifyId": "57TaM8GozkJBz90xvQ1xME",
+    "year": "1976"
+  },
+  "00083": {
+    "title": "Hedonism (Just Because You Feel Good)",
+    "artist": "Skunk Anansie",
+    "spotifyId": "0KPWi8mDRagwxnwaA0di8a",
+    "year": "1996"
+  },
+  "00084": {
+    "title": "The One and Only",
+    "artist": "Chesney Hawkes",
+    "spotifyId": "5o5U2r5F3ojvkhLSqRbY1Y",
+    "year": "1991"
+  },
+  "00085": {
+    "title": "Fly Robin Fly",
+    "artist": "Silver Convention",
+    "spotifyId": "4Wr14AISsCuBGdkA6rids4",
+    "year": "1975"
+  },
+  "00086": {
+    "title": "Red Red Wine",
+    "artist": "UB40",
+    "spotifyId": "1tOE1dIyIjsfLJWiQ4ZRJW",
+    "year": "1983"
+  },
+  "00087": {
+    "title": "People Are People",
+    "artist": "Depeche Mode",
+    "spotifyId": "4WoKuMjwJXuy9IqX6AH5JE",
+    "year": "1984"
+  },
+  "00088": {
+    "title": "I Want To Hold Your Hand",
+    "artist": "The Beatles",
+    "spotifyId": "5J3Mf6dyqeGy67yuQ7ql9B",
+    "year": "1963"
+  },
+  "00089": {
+    "title": "Narcotic - Radio Edit",
+    "artist": "Liquido",
+    "spotifyId": "1H5VQuShs4qfwBXyHF0PeH",
+    "year": "1998"
+  },
+  "00090": {
+    "title": "Papa Was A Rollin' Stone - Single Version",
+    "artist": "The Temptations",
+    "spotifyId": "7MiLmLbwNoyf47xQ4TCVYp",
+    "year": "1972"
+  },
+  "00091": {
+    "title": "A Girl Like You",
+    "artist": "Edwyn Collins",
+    "spotifyId": "0MteK167vtyb6hoJNC3Uz3",
+    "year": "1995"
+  },
+  "00092": {
+    "title": "Sign of the Times",
+    "artist": "Harry Styles",
+    "spotifyId": "5Ohxk2dO5COHF1krpoPigN",
+    "year": "2017"
+  },
+  "00093": {
+    "title": "Dream Lover",
+    "artist": "Bobby Darin",
+    "spotifyId": "1KLpjQFgubHI3GkAICCNH3",
+    "year": "1959"
+  },
+  "00094": {
+    "title": "Behind Blue Eyes",
+    "artist": "Limp Bizkit",
+    "spotifyId": "1MTQHCpraD4S8g5PAFKzoj",
+    "year": "2003"
+  },
+  "00095": {
+    "title": "Patience",
+    "artist": "Take That",
+    "spotifyId": "734t1GgKDg0Nc19tqxlJ0s",
+    "year": "2006"
+  },
+  "00096": {
+    "title": "Photograph",
+    "artist": "Ed Sheeran",
+    "spotifyId": "1HNkqx9Ahdgi1Ixy2xkKkL",
+    "year": "2014"
+  },
+  "00097": {
+    "title": "Underneath Your Clothes",
+    "artist": "Shakira",
+    "spotifyId": "15f8Cv8RXUlOOCIf2oaceN",
+    "year": "2001"
+  },
+  "00098": {
+    "title": "Always - 2009 Remaster",
+    "artist": "Erasure",
+    "spotifyId": "1vyWVgVwYfd15EGzz5zeej",
+    "year": "1994"
+  },
+  "00099": {
+    "title": "Don't Let Me Be Misunderstood",
+    "artist": "Santa Esmeralda",
+    "spotifyId": "0rCEfFfigLLYmAFeJXQvm6",
+    "year": "1977"
+  },
+  "00100": {
+    "title": "The Sound of Silence",
+    "artist": "Disturbed",
+    "spotifyId": "0eZBeB2xFIS65jQHerispi",
+    "year": "2015"
+  },
+  "00101": {
+    "title": "Dreadlock Holiday",
+    "artist": "10cc",
+    "spotifyId": "1LOZMYF5s8qhW7Rv4w2gun",
+    "year": "1978"
+  },
+  "00102": {
+    "title": "Quit Playing Games (With My Heart)",
+    "artist": "Backstreet Boys",
+    "spotifyId": "0Uqs7ilt5kGX9NzFDWTBrP",
+    "year": "1996"
+  },
+  "00103": {
+    "title": "Human",
+    "artist": "Rag'n'Bone Man",
+    "spotifyId": "5LLRo6dCGxg4PZmtSqNzrZ",
+    "year": "2016"
+  },
+  "00104": {
+    "title": "Crying At the Discoteque",
+    "artist": "Alcatraz",
+    "spotifyId": "5UcMexhqzhHXwGvYuA6kVj",
+    "year": "2000"
+  },
+  "00105": {
+    "title": "Eternal Flame",
+    "artist": "The Bangles",
+    "spotifyId": "5MoDQWMDMaAGDEiWsJfeCi",
+    "year": "1988"
+  },
+  "00106": {
+    "title": "Mamma Maria",
+    "artist": "Ricchi E Poveri",
+    "spotifyId": "7tVEeTbzEJkHP0EqUu6rmf",
+    "year": "1982"
+  },
+  "00107": {
+    "title": "Sweet Harmony",
+    "artist": "The Beloved",
+    "spotifyId": "5lSOVaPDk7x9Ey6c9DqGZx",
+    "year": "1993"
+  },
+  "00108": {
+    "title": "Dreamer",
+    "artist": "Ozzy Osbourne",
+    "spotifyId": "78PKCefXwDLbl4FVO1Pjzh",
+    "year": "2001"
+  },
+  "00109": {
+    "title": "Like The Way I Do",
+    "artist": "Melissa Etheridge",
+    "spotifyId": "3Fe3L3N5pGaa0BBT4eVypZ",
+    "year": "1988"
+  },
+  "00110": {
+    "title": "Save the Last Dance for Me",
+    "artist": "The Drifters",
+    "spotifyId": "391TUcoPonqYykPkSZ5Z9U",
+    "year": "1960"
+  },
+  "00111": {
+    "title": "Far Far Away",
+    "artist": "Slade",
+    "spotifyId": "3SZkTTibswLaKIEyEfaAFM",
+    "year": "1974"
+  },
+  "00112": {
+    "title": "Dreams Are Ten A Penny",
+    "artist": "John Kincade",
+    "spotifyId": "2l3PcN960dFLwkWsFQSw0n",
+    "year": "1972"
+  },
+  "00113": {
+    "title": "When We Stand Together",
+    "artist": "Nickelback",
+    "spotifyId": "4bCOAuhvjsxbVBM5MM8oik",
+    "year": "2011"
+  },
+  "00114": {
+    "title": "Video Killed The Radio Star - Single Version",
+    "artist": "The Buggles",
+    "spotifyId": "7nm8w9dMwTjlWDosdnxBSn",
+    "year": "1979"
+  },
+  "00115": {
+    "title": "Run",
+    "artist": "Leona Lewis",
+    "spotifyId": "69sRLJM4Wy2ykLs92f7prG",
+    "year": "2008"
+  },
+  "00116": {
+    "title": "Ain't No Sunshine - Single Version",
+    "artist": "Bill Withers",
+    "spotifyId": "7kWaNdfYcumoC1cgFmhkSo",
+    "year": "1971"
+  },
+  "00117": {
+    "title": "Why Does It Always Rain On Me?",
+    "artist": "Travis",
+    "spotifyId": "5MmWgG5KgiqSxkOZdVXRQA",
+    "year": "1999"
+  },
+  "00118": {
+    "title": "The Sound of Musik",
+    "artist": "Falco",
+    "spotifyId": "54OoOYiMFZbt0m4KPW66GJ",
+    "year": "1986"
+  },
+  "00119": {
+    "title": "Maria Magdalena",
+    "artist": "Sandra",
+    "spotifyId": "3i78L3PrYSUoz9PhNbm9wb",
+    "year": "1985"
+  },
+  "00120": {
+    "title": "Destiny",
+    "artist": "Jennifer Rush",
+    "spotifyId": "2G1P5HoHl95ZWKmK4P9g47",
+    "year": "1985"
+  },
+  "00121": {
+    "title": "How Do You Do!",
+    "artist": "Roxette",
+    "spotifyId": "4Hn14NabX651eOOzsLL8Uc",
+    "year": "1992"
+  },
+  "00122": {
+    "title": "The Last Unicorn",
+    "artist": "America",
+    "spotifyId": "59uopHNpuKcozG1GQlZOiY",
+    "year": "1982"
+  },
+  "00123": {
+    "title": "Lucifer",
+    "artist": "The Alan Parsons Project",
+    "spotifyId": "2QTAl6K1dEwzOoPdkpZORX",
+    "year": "1979"
+  },
+  "00124": {
+    "title": "Maria",
+    "artist": "Blondie",
+    "spotifyId": "7bOYOD0d7ByMTXvJnQVl8d",
+    "year": "1999"
+  },
+  "00125": {
+    "title": "I Love You Always Forever",
+    "artist": "Donna Lewis",
+    "spotifyId": "1PEqh7awkpuepLBSq8ZwqD",
+    "year": "1996"
+  },
+  "00126": {
+    "title": "Englishman In New York",
+    "artist": "Sting",
+    "spotifyId": "4KFM3A5QF2IMcc6nHsu3Wp",
+    "year": "1987"
+  },
+  "00127": {
+    "title": "Where Did Our Love Go",
+    "artist": "The Supremes",
+    "spotifyId": "69RH84na5iUNwrwxpgjC5j",
+    "year": "1964"
+  },
+  "00128": {
+    "title": "Son Of A Preacher Man",
+    "artist": "Dusty Springfield",
+    "spotifyId": "6ek9SiEj5a65WIs2EV7qiM",
+    "year": "1968"
+  },
+  "00129": {
+    "title": "Apologize",
+    "artist": "Timbaland",
+    "spotifyId": "6ucR4KfvsBFWCMVFDvyKKl",
+    "year": "2007"
+  },
+  "00130": {
+    "title": "Walk In The Park",
+    "artist": "Nick Straker",
+    "spotifyId": "284PXSCD8lGtytVviIkts3",
+    "year": "1979"
+  },
+  "00131": {
+    "title": "Stay Another Day",
+    "artist": "East 17",
+    "spotifyId": "4wYCe9tSmUolNU4WmJKbZy",
+    "year": "1994"
+  },
+  "00132": {
+    "title": "No Milk Today",
+    "artist": "Herman's Hermits",
+    "spotifyId": "26rqwzpocGyyW0Zn0Tb704",
+    "year": "1966"
+  },
+  "00133": {
+    "title": "A Night Like This",
+    "artist": "Caro Emerald",
+    "spotifyId": "7nuBU1HCcOwG5f1orN4ByW",
+    "year": "2009"
+  },
+  "00134": {
+    "title": "The Letter",
+    "artist": "The Box Tops",
+    "spotifyId": "6RJK553YhstRzyKA4mug09",
+    "year": "1967"
+  },
+  "00135": {
+    "title": "Father And Son",
+    "artist": "Yusuf / Cat Stevens",
+    "spotifyId": "476V2d6iA2tWXgQboKmTtA",
+    "year": "1970"
+  },
+  "00136": {
+    "title": "Anti-Hero",
+    "artist": "Taylor Swift",
+    "spotifyId": "0V3wPSX9ygBnCm8psDIegu",
+    "year": "2022"
+  },
+  "00137": {
+    "title": "Waiting for a Star to Fall",
+    "artist": "Boy Meets Girl",
+    "spotifyId": "09huOVRryZNV2deKFZLJDC",
+    "year": "1988"
+  },
+  "00138": {
+    "title": "Keep on Loving You",
+    "artist": "REO Speedwagon",
+    "spotifyId": "4rcHWl68ai6KvpXlc8vbnE",
+    "year": "1980"
+  },
+  "00139": {
+    "title": "Sunchyme",
+    "artist": "Dario G",
+    "spotifyId": "2YOuBWIyHgyvHnLMpjzBf2",
+    "year": "1997"
+  },
+  "00140": {
+    "title": "Foot Of The Mountain",
+    "artist": "a-ha",
+    "spotifyId": "3Cm2bgwzocxsB5sD6g8VSL",
+    "year": "2009"
+  },
+  "00141": {
+    "title": "Memories",
+    "artist": "Maroon 5",
+    "spotifyId": "4cktbXiXOapiLBMprHFErI",
+    "year": "2019"
+  },
+  "00142": {
+    "title": "Moviestar",
+    "artist": "Harpo",
+    "spotifyId": "4t9EUCjCPbdfqtOH25k8AU",
+    "year": "1975"
+  },
+  "00143": {
+    "title": "Stumblin' In",
+    "artist": "CYRIL",
+    "spotifyId": "0h3Xy4V4apMraB5NuM8U7Z",
+    "year": "2023"
+  },
+  "00144": {
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "spotifyId": "3z8h0TU7ReDPLIbEnYhWZb",
+    "year": "1975"
+  },
+  "00145": {
+    "title": "If You Can't Give Me Love",
+    "artist": "Suzi Quatro",
+    "spotifyId": "12VVhwwzhAi0GBzJFarIEP",
+    "year": "1978"
+  },
+  "00146": {
+    "title": "Bitch",
+    "artist": "Meredith Brooks",
+    "spotifyId": "3i6qNxyVgIdUZTTi5m25EM",
+    "year": "1997"
+  },
+  "00147": {
+    "title": "Down Under",
+    "artist": "Men At Work",
+    "spotifyId": "3ZZq9396zv8pcn5GYVhxUi",
+    "year": "1981"
+  },
+  "00148": {
+    "title": "Don't Be Cruel",
+    "artist": "Elvis Presley",
+    "spotifyId": "01u6AEzGbGbQyYVdxajxqk",
+    "year": "1956"
+  },
+  "00149": {
+    "title": "Hooked On A Feeling",
+    "artist": "Blue Swede",
+    "spotifyId": "17pOLaBouf2EleJjsHfJSg",
+    "year": "1974"
+  },
+  "00150": {
+    "title": "The Boxer",
+    "artist": "Simon & Garfunkel",
+    "spotifyId": "76TZCvJ8GitQ2FA1q5dKu0",
+    "year": "1969"
+  },
+  "00151": {
+    "title": "We're Not Gonna Take It",
+    "artist": "Twisted Sister",
+    "spotifyId": "1hlveB9M6ijHZRbzZ2teyh",
+    "year": "1984"
+  },
+  "00152": {
+    "title": "Don't Pay The Ferryman",
+    "artist": "Chris de Burgh",
+    "spotifyId": "0vJlZS5zLMhRQ6xo9vmAlB",
+    "year": "1982"
+  },
+  "00153": {
+    "title": "All Out Of Love",
+    "artist": "Andru Donalds",
+    "spotifyId": "0Fr54TvVCUMH9gdA6JMopJ",
+    "year": "1999"
+  },
+  "00154": {
+    "title": "World of Our Own",
+    "artist": "Westlife",
+    "spotifyId": "4SAHTVRe6EBhgAOWl49yPf",
+    "year": "2002"
+  }
+}
