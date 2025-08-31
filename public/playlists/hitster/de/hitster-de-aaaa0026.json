@@ -1,0 +1,926 @@
+{
+  "00001": {
+    "title": "Bodyguard (I Will Always Love You)",
+    "artist": "Whitney Houston",
+    "spotifyId": "4eHbdreAnSOrDDsFfc4Fpm",
+    "year": "1992"
+  },
+  "00002": {
+    "title": "American Beauty",
+    "artist": "Thomas Newman",
+    "spotifyId": "6XJGpirOP4Bgurcvkdanxb",
+    "year": "1999"
+  },
+  "00003": {
+    "title": "Der Zauberer von Oz (Over The Rainbow)",
+    "artist": "Judy Garland",
+    "spotifyId": "568SEFtDjKr7N2PytpA6D5",
+    "year": "1939"
+  },
+  "00004": {
+    "title": "Die Brücke am Kwai (The Colonel Bogey March)",
+    "artist": "Malcolm Arnold",
+    "spotifyId": "0GJdlmUYa1oBqjcj93Z5GC",
+    "year": "1957"
+  },
+  "00005": {
+    "title": "The Avengers",
+    "artist": "Alan Silvestri",
+    "spotifyId": "5SXsXjVJCWeJuf7FHvgBYR",
+    "year": "2012"
+  },
+  "00006": {
+    "title": "Unsere kleine Farm",
+    "artist": "David Rose,Daniel Caine Orchestra",
+    "spotifyId": "132I6UhRKQoslXIVSgoKuk",
+    "year": "1974"
+  },
+  "00007": {
+    "title": "Avatar - Aufbruch nach Pandora (I See You)",
+    "artist": "Leona Lewis",
+    "spotifyId": "02TVrXmI9EBYpuSdmTr4gn",
+    "year": "2009"
+  },
+  "00008": {
+    "title": "Das A-Team",
+    "artist": "Dominik Hause & Mike Post",
+    "spotifyId": "4cdHlUOUlw0GCtq4yJGMn1",
+    "year": "1983"
+  },
+  "00009": {
+    "title": "Willow",
+    "artist": "James Horner",
+    "spotifyId": "2Dy9bSUlnypC8Rm5O1iTOZ",
+    "year": "1988"
+  },
+  "00010": {
+    "title": "That Thing You Do!",
+    "artist": "The Wonders",
+    "spotifyId": "4O6ZaZrRCFfiZZKjnrXqlk",
+    "year": "1996"
+  },
+  "00011": {
+    "title": "Beverly Hills Cop (Axel F)",
+    "artist": "Harold Faltermeyer",
+    "spotifyId": "5w4DKOH3EsOPUuoHXieLtB",
+    "year": "1984"
+  },
+  "00012": {
+    "title": "Das Leben ist schön (La vita è bella)",
+    "artist": "Nicola Piovani",
+    "spotifyId": "7ob7mrVX7FEQIT2gSClVtA",
+    "year": "1997"
+  },
+  "00013": {
+    "title": "Cheers (Where Everybody Knows Your Name)",
+    "artist": "Gary Portnoy",
+    "spotifyId": "2uE8l7sar0JT0tZYhrPz8S",
+    "year": "1982"
+  },
+  "00014": {
+    "title": "A Star Is Born (Always Remember Us This Way)",
+    "artist": "Lady Gaga",
+    "spotifyId": "74iZuPGwyL33VlTr6jTnab",
+    "year": "2018"
+  },
+  "00015": {
+    "title": "Once (Falling Slowly)",
+    "artist": "Glen Hansard, Markéta Irglová",
+    "spotifyId": "6EIVLz5xM1xE29r0OmIkWt",
+    "year": "2007"
+  },
+  "00016": {
+    "title": "Das erstaunliche Leben des Walter Mitty (Stay Alive)",
+    "artist": "José González",
+    "spotifyId": "0ZNYGrmcehorhh9JOeg5Iv",
+    "year": "2013"
+  },
+  "00017": {
+    "title": "Ein Offizier und ein Gentleman (Up Where We Belong)",
+    "artist": "Joe Cocker, Jennifer Warnes",
+    "spotifyId": "2S1JhDcpEArlLTmNYhW4q5",
+    "year": "1982"
+  },
+  "00018": {
+    "title": "Der Prinz von Bel-Air",
+    "artist": "DJ Jazzy Jeff & Will Smith",
+    "spotifyId": "0UREO3QWbXJW3gOUXpK1am",
+    "year": "1990"
+  },
+  "00019": {
+    "title": "Gladiator (Now We Are Free)",
+    "artist": "Hans Zimmer",
+    "spotifyId": "1elGwF4VwkwglV4nCBPJtv",
+    "year": "2000"
+  },
+  "00020": {
+    "title": "Beverly Hills 90210",
+    "artist": "John E. Davis",
+    "spotifyId": "5asGzAVe16Tb1tYkudHcUI",
+    "year": "1990"
+  },
+  "00021": {
+    "title": "The Big Bang Theory",
+    "artist": "Barenaked Ladies",
+    "spotifyId": "5FCPN8g30PRH7lLgxDh9LQ",
+    "year": "2007"
+  },
+  "00022": {
+    "title": "Grease (Summer Nights)",
+    "artist": "John Travolta, Olivia Newton-John",
+    "spotifyId": "2AVkArcfALVk2X8sfPRzya",
+    "year": "1978"
+  },
+  "00023": {
+    "title": "James Bond 007 - GoldenEye",
+    "artist": "Tina Turner",
+    "spotifyId": "528QhCT2v3HgD71RmrSUNW",
+    "year": "1995"
+  },
+  "00024": {
+    "title": "Narcos (Tuyo)",
+    "artist": "Rodrigo Amarante",
+    "spotifyId": "6g2BiiVQqY5v1S4HIrM54F",
+    "year": "2015"
+  },
+  "00025": {
+    "title": "Krieg der Sterne (Star Wars)",
+    "artist": "John Williams",
+    "spotifyId": "3ZSf1TJZyRb0rnWYuUtdX4",
+    "year": "1977"
+  },
+  "00026": {
+    "title": "Casablanca (As Time Goes By)",
+    "artist": "Dooley Wilson",
+    "spotifyId": "3gDPjU8URd9mtZhBBYwI2R",
+    "year": "1942"
+  },
+  "00027": {
+    "title": "Black Panther (All The Stars)",
+    "artist": "Kendrick Lamar, SZA",
+    "spotifyId": "3GCdLUSnKSMJhs4Tj6CV3s",
+    "year": "2018"
+  },
+  "00028": {
+    "title": "Stranger Things",
+    "artist": "Kyle Dixon & Michael Stein",
+    "spotifyId": "0kwuKfWntoGh0EWyYb7Mpf",
+    "year": "2016"
+  },
+  "00029": {
+    "title": "Saturday Night Fever (Night Fever)",
+    "artist": "Bee Gees",
+    "spotifyId": "32GikG80Mgfp4pQaI5LgjC",
+    "year": "1977"
+  },
+  "00030": {
+    "title": "Pretty Woman (It Must Have Been Love)",
+    "artist": "Roxette",
+    "spotifyId": "6kvoHl80mfCVTv7XnZkjQn",
+    "year": "1990"
+  },
+  "00031": {
+    "title": "Selma (Glory)",
+    "artist": "Common, John Legend",
+    "spotifyId": "2fmqPLRFdJNPhLU3b2NSFp",
+    "year": "2014"
+  },
+  "00032": {
+    "title": "Das Piano (The Heart Asks Pleasure First)",
+    "artist": "Michael Nyman",
+    "spotifyId": "4RW7EZi7SHSLRwvn1Q8Mqj",
+    "year": "1993"
+  },
+  "00033": {
+    "title": "La La Land (City Of Stars)",
+    "artist": "Ryan Gosling, Emma Stone",
+    "spotifyId": "6XQHlsNu6so4PdglFkJQRJ",
+    "year": "2016"
+  },
+  "00034": {
+    "title": "2001 Odyssee im Weltraum (Also Spracht Zarathustra)",
+    "artist": "Richard Strauss",
+    "spotifyId": "5llCIz1U9DoI03Hit31wna",
+    "year": "1968"
+  },
+  "00035": {
+    "title": "The Walking Dead",
+    "artist": "Bear McCreary",
+    "spotifyId": "2cji350vUbvxQ9QwyL5Nkp",
+    "year": "2010"
+  },
+  "00036": {
+    "title": "Platoon",
+    "artist": "Georges Delerue",
+    "spotifyId": "1zSkHrYVRdpDH8FwYjI9mD",
+    "year": "1986"
+  },
+  "00037": {
+    "title": "Dreamgirls (Listen)",
+    "artist": "Beyoncé",
+    "spotifyId": "0Ai8kxhieTjlqrdHBz9ZPC",
+    "year": "2006"
+  },
+  "00038": {
+    "title": "Arthur (Best That You Can Do)",
+    "artist": "Christopher Cross",
+    "spotifyId": "5fnOrhQ4KgT5irGCjIccGH",
+    "year": "1981"
+  },
+  "00039": {
+    "title": "Seinfeld",
+    "artist": "Jonathan Wolff",
+    "spotifyId": "1oo7pneuUHUEKdbH0TgiGc",
+    "year": "1989"
+  },
+  "00040": {
+    "title": "Encanto (We Don't Talk About Bruno)",
+    "artist": "Encanto Cast",
+    "spotifyId": "52xJxFP6TqMuO4Yt0eOkMz",
+    "year": "2021"
+  },
+  "00041": {
+    "title": "Phenomenon (Change the World)",
+    "artist": "Eric Clapton",
+    "spotifyId": "5Ds0VGkTSQ1jf4KzLUpZPb",
+    "year": "1996"
+  },
+  "00042": {
+    "title": "Who's That Girl",
+    "artist": "Madonna",
+    "spotifyId": "3G0NNqwQ1sqRpySr6soHlH",
+    "year": "1987"
+  },
+  "00043": {
+    "title": "Cabaret",
+    "artist": "Liza Minnelli",
+    "spotifyId": "7AFy1aN1RQVgGOXzCtrK87",
+    "year": "1972"
+  },
+  "00044": {
+    "title": "Top Gun (Take My Breath Away)",
+    "artist": "Berlin",
+    "spotifyId": "15MJ5NThPjj6xhPcts8MiY",
+    "year": "1986"
+  },
+  "00045": {
+    "title": "Terminator 2",
+    "artist": "Brad Fiedel",
+    "spotifyId": "2Q84nSfFAHtFNwZhAKH0Sa",
+    "year": "1991"
+  },
+  "00046": {
+    "title": "Footloose",
+    "artist": "Kenny Loggins",
+    "spotifyId": "6W2VbtvMrDXm5vYeB7amkO",
+    "year": "1984"
+  },
+  "00047": {
+    "title": "Frühstück bei Tiffany (Moon River)",
+    "artist": "Audrey Hepburn",
+    "spotifyId": "1XwAKjAZ1xDZOcuyZoqce4",
+    "year": "1961"
+  },
+  "00048": {
+    "title": "Sex And The City",
+    "artist": "Douglas J. Cuomo",
+    "spotifyId": "2wqmfNYxkxfw2KHRqkxTA1",
+    "year": "1998"
+  },
+  "00049": {
+    "title": "Zwei glorreiche Halunken - The Good, The Bad And The Ugly",
+    "artist": "Ennio Morricone",
+    "spotifyId": "1JSIWsJfxOji0FrxFcxdCK",
+    "year": "1966"
+  },
+  "00050": {
+    "title": "Pinocchio (When You Wish Upon a Star)",
+    "artist": "Cliff Edwards",
+    "spotifyId": "1WrPa4lrIddctGWAIYYfP9",
+    "year": "1940"
+  },
+  "00051": {
+    "title": "Yellow Submarine",
+    "artist": "The Beatles",
+    "spotifyId": "1tdltVUBkiBCW1C3yB4zyD",
+    "year": "1968"
+  },
+  "00052": {
+    "title": "Der Mann, der zuviel wusste (Que Sera Sera)",
+    "artist": "Doris Day, Frank DeVol",
+    "spotifyId": "4Ylqc711Eq763XbTAOABu3",
+    "year": "1956"
+  },
+  "00053": {
+    "title": "Batman",
+    "artist": "Danny Elfman",
+    "spotifyId": "50csT5Qb2qOF7lHdDQ1Sbx",
+    "year": "1989"
+  },
+  "00054": {
+    "title": "Armageddon (I Don't Want to Miss a Thing)",
+    "artist": "Aerosmith",
+    "spotifyId": "225xvV8r1yKMHErSWivnow",
+    "year": "1998"
+  },
+  "00055": {
+    "title": "Shaft",
+    "artist": "Isaac Hayes",
+    "spotifyId": "3126iwAXVfyNQDP5iW2OAr",
+    "year": "1971"
+  },
+  "00056": {
+    "title": "Das Leben des Brian (Always Look On The Bright Side Of Life)",
+    "artist": "Monty Python",
+    "spotifyId": "4DEcdqqKokU7UAE4wCGQEy",
+    "year": "1979"
+  },
+  "00057": {
+    "title": "Game of Thrones",
+    "artist": "Ramin Djawadi",
+    "spotifyId": "2q6fxAvSpqXR4jx9Ne7RGz",
+    "year": "2011"
+  },
+  "00058": {
+    "title": "The Mandalorian",
+    "artist": "Ludwig Göransson",
+    "spotifyId": "6tJFtthY0rI1x06qb8NjK0",
+    "year": "2019"
+  },
+  "00059": {
+    "title": "Akte X - The X Files",
+    "artist": "John Beal",
+    "spotifyId": "3pDZSfOSszYWMYygDiuPJx",
+    "year": "1993"
+  },
+  "00060": {
+    "title": "Die Schöne und das Biest - Beauty and the Beast",
+    "artist": "Angela Lansbury",
+    "spotifyId": "2rJFFUEl1LURkV0b0OARXx",
+    "year": "1991"
+  },
+  "00061": {
+    "title": "Moulin Rouge (El Tango De Roxanne)",
+    "artist": "José Feliciano,Ewan McGregor,Jacek Koman",
+    "spotifyId": "2aXDWWlbLUapMZnYNDErmv",
+    "year": "2001"
+  },
+  "00062": {
+    "title": "Superman",
+    "artist": "John Williams",
+    "spotifyId": "4tABZngfyleLXr5wxHgRxZ",
+    "year": "1978"
+  },
+  "00063": {
+    "title": "Jenseits von Afrika (I Had A Farm)",
+    "artist": "John Barry",
+    "spotifyId": "6qLLYJGpPhHPF7M4o53qJB",
+    "year": "1985"
+  },
+  "00064": {
+    "title": "Wednesday",
+    "artist": "Danny Elfman",
+    "spotifyId": "3dd9uXh41vmFLO3UvqLJL6",
+    "year": "2022"
+  },
+  "00065": {
+    "title": "Der letzte Tango in Paris",
+    "artist": "Gato Barbieri",
+    "spotifyId": "2dRjEirtMproK2r4gzda1j",
+    "year": "1972"
+  },
+  "00066": {
+    "title": "So wie wir waren - The Way We Were",
+    "artist": "Barbra Streisand",
+    "spotifyId": "1vZTgn4JXWMahR8r99ug5H",
+    "year": "1973"
+  },
+  "00067": {
+    "title": "Twin Peaks",
+    "artist": "Angelo Badalamenti",
+    "spotifyId": "7FO7BolIZsl1o8DDSjeOph",
+    "year": "1990"
+  },
+  "00068": {
+    "title": "Buffy, im Bann der Dämonen - Buffy The Vampire Slayer",
+    "artist": "Nerf Herder",
+    "spotifyId": "3TZ3NVQtkj4nFPANN946Ct",
+    "year": "1997"
+  },
+  "00069": {
+    "title": "L.A. Law - Law & Order",
+    "artist": "Dominik Hauser",
+    "spotifyId": "1uGAELzmPgVn1hRMrjVuQ9",
+    "year": "1986"
+  },
+  "00070": {
+    "title": "8 Mile (Lose Yourself)",
+    "artist": "Eminem",
+    "spotifyId": "7MJQ9Nfxzh8LPZ9e9u68Fq",
+    "year": "2002"
+  },
+  "00071": {
+    "title": "Fluch der Karibik (He's a Pirate)",
+    "artist": "Klaus Badelt",
+    "spotifyId": "4AD2dterIUjNt1LFNI9Bvi",
+    "year": "2003"
+  },
+  "00072": {
+    "title": "Drei Mädchen und drei Jungen - The Brady Bunch",
+    "artist": "Sherwood Schwartz, Frank Devol",
+    "spotifyId": "1HyLRvrwqChIybFqycgu3M",
+    "year": "1969"
+  },
+  "00073": {
+    "title": "Greatest Showman (This Is Me)",
+    "artist": "Keala Settle",
+    "spotifyId": "45aBsnKRWUzhwbcqOJLwfe",
+    "year": "2017"
+  },
+  "00074": {
+    "title": "Forrest Gump (Forrest Gump Suite)",
+    "artist": "Alan Silvestri",
+    "spotifyId": "655OjsI6LbHdo3565qEfbE",
+    "year": "1994"
+  },
+  "00075": {
+    "title": "Coyote Ugly (Can't Fight The Moonlight)",
+    "artist": "LeAnn Rimes",
+    "spotifyId": "2AogRMqARWyUP7VQ3gmSoY",
+    "year": "2000"
+  },
+  "00076": {
+    "title": "How I Met Your Mother",
+    "artist": "Hey Beautiful",
+    "spotifyId": "1NdpUcsAG5mA3kZbGWc4TH",
+    "year": "2005"
+  },
+  "00077": {
+    "title": "Die Stunde des Siegers",
+    "artist": "Vangelis",
+    "spotifyId": "36qn2bFfZzUwM6eIv2XOc9",
+    "year": "1981"
+  },
+  "00078": {
+    "title": "Chicago (Cell Block Tango)",
+    "artist": "Catherine Zeta-Jones",
+    "spotifyId": "28Tmk14BdrfaV2YzxpB35c",
+    "year": "2002"
+  },
+  "00079": {
+    "title": "Transformers (What I've Done)",
+    "artist": "Linkin Park",
+    "spotifyId": "18lR4BzEs7e3qzc0KVkTpU",
+    "year": "2007"
+  },
+  "00080": {
+    "title": "Bad Boys",
+    "artist": "Inner Circle",
+    "spotifyId": "1NojrDCqDLh4dWRZ7F589Q",
+    "year": "1995"
+  },
+  "00081": {
+    "title": "The Twilight Saga: Breaking Dawn (A thousand years)",
+    "artist": "Christina Perri",
+    "spotifyId": "6lanRgr6wXibZr8KgzXxBl",
+    "year": "2008"
+  },
+  "00082": {
+    "title": "Dallas",
+    "artist": "Dominik Hauser",
+    "spotifyId": "2vuzSRHcqyoAylvQNADhqQ",
+    "year": "1978"
+  },
+  "00083": {
+    "title": "Der Herr der Ringe (The Shire)",
+    "artist": "Howard Shore",
+    "spotifyId": "6zW80jVqLtgSF1yCtGHiiD",
+    "year": "2001"
+  },
+  "00084": {
+    "title": "Braveheart (For The Love Of A Princess)",
+    "artist": "James Horner",
+    "spotifyId": "22yxHt6UqZpH7tP6W4PooI",
+    "year": "1995"
+  },
+  "00085": {
+    "title": "Drei Engel für Charlie",
+    "artist": "Jack Elliot",
+    "spotifyId": "09zrIoLQUv9PZRaP4jBC7T",
+    "year": "1976"
+  },
+  "00086": {
+    "title": "Highlander - Es kann nur einen geben (Princes Of The Universe)",
+    "artist": "Queen",
+    "spotifyId": "0Uy8lcDHiPDicBQ7rnDgcK",
+    "year": "1986"
+  },
+  "00087": {
+    "title": "Mannequin (Nothing's Gonna Stop Us Now)",
+    "artist": "Starship",
+    "spotifyId": "3X7uFMzJrEE0sxn62qd8Ch",
+    "year": "1987"
+  },
+  "00088": {
+    "title": "Bonanza",
+    "artist": "Ray Evans, Jerry Livingston",
+    "spotifyId": "3STVHSJR6ZPGg9CI0aNP9q",
+    "year": "1959"
+  },
+  "00089": {
+    "title": "Spider-Man (Hero)",
+    "artist": "Chad Kroeger, Josey Scott",
+    "spotifyId": "779ooI3rBd0CLqCiiJmtVo",
+    "year": "2002"
+  },
+  "00090": {
+    "title": "Der Pate (The Godfather Waltz)",
+    "artist": "Nino Rota",
+    "spotifyId": "3WoSJF85H0qywD4qLp4HDd",
+    "year": "1972"
+  },
+  "00091": {
+    "title": "Notting Hill (When You Say Nothing At All)",
+    "artist": "Ronan Keating",
+    "spotifyId": "2cq26EEiqgUDP1VBKm9r6Z",
+    "year": "1999"
+  },
+  "00092": {
+    "title": "Succession",
+    "artist": "Nicholas Britell",
+    "spotifyId": "0bSHwuTOZVJUXWT03H9oD2",
+    "year": "2018"
+  },
+  "00093": {
+    "title": "Du sollst mein Glücksstern sein (Singin' In The Rain)",
+    "artist": "Gene Kelly",
+    "spotifyId": "5U3MkUWTpzj37A33GboDtv",
+    "year": "1952"
+  },
+  "00094": {
+    "title": "Dexter",
+    "artist": "Rolfe Kent",
+    "spotifyId": "3CxmaZX0VbpEi1Sw4gMJcf",
+    "year": "2006"
+  },
+  "00095": {
+    "title": "Slumdog Millionär (Jai Ho)",
+    "artist": "A. R. Rahman",
+    "spotifyId": "0BlMvHfyilCmgKrNUQabR6",
+    "year": "2008"
+  },
+  "00096": {
+    "title": "Suicide Squad (Heathens)",
+    "artist": "Twenty One Pilots",
+    "spotifyId": "6i0V12jOa3mr6uu4WYhUBr",
+    "year": "2016"
+  },
+  "00097": {
+    "title": "The Office",
+    "artist": "Jay Ferguson",
+    "spotifyId": "5qxv6jEm7CMgP663kw09OP",
+    "year": "2005"
+  },
+  "00098": {
+    "title": "Matrix (Clubbed to Death)",
+    "artist": "Robert D.",
+    "spotifyId": "2ffVdgR2RUHIaENDIrlVvG",
+    "year": "1999"
+  },
+  "00099": {
+    "title": "Halloween - Die Nacht des Grauens",
+    "artist": "John Carpenter",
+    "spotifyId": "7swocJUCUWTCiRUAU9oerC",
+    "year": "1978"
+  },
+  "00100": {
+    "title": "The Crown",
+    "artist": "Hans Zimmer",
+    "spotifyId": "21u2gUlh5Iun4ogGGqKVum",
+    "year": "2016"
+  },
+  "00101": {
+    "title": "Fame - Der Weg zum Ruhm",
+    "artist": "Irene Cara",
+    "spotifyId": "5CI1FP2Volc9wjz2MBZsGx",
+    "year": "1980"
+  },
+  "00102": {
+    "title": "Harry Potter und der Stein der Weisen (Prologue)",
+    "artist": "John Williams",
+    "spotifyId": "6CeCOC2zx1qS8mQNYHe6IM",
+    "year": "2001"
+  },
+  "00103": {
+    "title": "Coco - Lebendiger als das Leben! (Un Poco Loco)",
+    "artist": "Anthony Gonzalez, Gael Garcia Bernal",
+    "spotifyId": "0OFknyqxmSQ42SoKxWVTok",
+    "year": "2017"
+  },
+  "00104": {
+    "title": "Two and a Half Men (Manly Men)",
+    "artist": "Chuck Lorre, Lee Aronsohn",
+    "spotifyId": "0HIwcD6kicYqmY0yGWdZId",
+    "year": "2003"
+  },
+  "00105": {
+    "title": "Jurassic Park",
+    "artist": "John Williams",
+    "spotifyId": "2TZbQZXOuR8osP2AK8yYMN",
+    "year": "1993"
+  },
+  "00106": {
+    "title": "Mad Max - Jenseits der Donnerkuppel (We Don't Need Another Hero)",
+    "artist": "Tina Turner",
+    "spotifyId": "1qyJ6XpMHdsJD8pkiA7Qww",
+    "year": "1985"
+  },
+  "00107": {
+    "title": "Godzilla (Deeper Underground)",
+    "artist": "Jamiroquai",
+    "spotifyId": "0y8kwqOr9OfodZeBOGPdPp",
+    "year": "1998"
+  },
+  "00108": {
+    "title": "Das Phantom der Opera",
+    "artist": "Andrew Lloyd Webber, Gerard Butler, Emmy Rossum",
+    "spotifyId": "4EaBMhUIOfnFEbIgqCfKbi",
+    "year": "2004"
+  },
+  "00109": {
+    "title": "Aladdin (A Whole New World)",
+    "artist": "Lea Salonga, Brad Kane",
+    "spotifyId": "1hwdPQtFHISvZ9SXMkNrIK",
+    "year": "2004"
+  },
+  "00110": {
+    "title": "Blondinen bevorzugt (Diamonds Are a Girl's Best Friend)",
+    "artist": "Marilyn Monroe",
+    "spotifyId": "1pA7B5yYdhsopaWPCOKDac",
+    "year": "1953"
+  },
+  "00111": {
+    "title": "Der weiße Hai",
+    "artist": "John Williams",
+    "spotifyId": "55xly70WJY1cx5qsoogaqs",
+    "year": "1975"
+  },
+  "00112": {
+    "title": "Love Story",
+    "artist": "Francis Lai",
+    "spotifyId": "5qjVtEglMJOGe3xCCbjN25",
+    "year": "1970"
+  },
+  "00113": {
+    "title": "Her (The Moon Song)",
+    "artist": "Karen O, Ezra Koenig",
+    "spotifyId": "6E0YEPzjMvUymYOvmDIgp4",
+    "year": "2013"
+  },
+  "00114": {
+    "title": "Shining",
+    "artist": "Wendy Carlos",
+    "spotifyId": "4WnuHIJTLrFkAQdpryLDe7",
+    "year": "1980"
+  },
+  "00115": {
+    "title": "James Bond 007 - Skyfall",
+    "artist": "Adele",
+    "spotifyId": "6VObnIkLVruX4UVyxWhlqm",
+    "year": "2012"
+  },
+  "00116": {
+    "title": "Zwei Banditen (Raindrops Keep Fallin' On My Head)",
+    "artist": "Burt Bacharach",
+    "spotifyId": "039tOvW37VzuntOfrUVS8L",
+    "year": "1969"
+  },
+  "00117": {
+    "title": "Tatsächlich Liebe (Christmas Is All Around)",
+    "artist": "Billy Mack",
+    "spotifyId": "2bWizjWMdoTFUmMdaZsZsi",
+    "year": "2003"
+  },
+  "00118": {
+    "title": "Kevin - Allein zu Haus (Somewhere in My Memory)",
+    "artist": "John Williams",
+    "spotifyId": "1FlxqJmoZWS2q1uRlyZVur",
+    "year": "1990"
+  },
+  "00119": {
+    "title": "Baywatch (I'm Always Here)",
+    "artist": "Jimi Jamison",
+    "spotifyId": "3e6pMd60bzt4Kd72qmPRfA",
+    "year": "1989"
+  },
+  "00120": {
+    "title": "Cocktail (Kokomo)",
+    "artist": "The Beach Boys",
+    "spotifyId": "1fiorGW4O4s6vpFhbdc7EV",
+    "year": "1988"
+  },
+  "00121": {
+    "title": "Das fünfte Element (The Diva Dance)",
+    "artist": "Éric Serra, Inva Mula",
+    "spotifyId": "5BZAhQYLSqjtF4Xio5MIQd",
+    "year": "1997"
+  },
+  "00122": {
+    "title": "Police Academy",
+    "artist": "Robert Folk",
+    "spotifyId": "57feAoAx0AkUZL9YskARaF",
+    "year": "1984"
+  },
+  "00123": {
+    "title": "Falcon Crest",
+    "artist": "Marc Bradley",
+    "spotifyId": "0Bm4ERW2KHz2Ol0JFlAh2n",
+    "year": "1981"
+  },
+  "00124": {
+    "title": "Die Bourne Identität (Extreme Ways)",
+    "artist": "Richard Hall, Moby",
+    "spotifyId": "4nZInUxh3l1qp2nUFq1ICp",
+    "year": "2002"
+  },
+  "00125": {
+    "title": "Requiem for a Dream (Lux Aeterna)",
+    "artist": "Clint Mansell",
+    "spotifyId": "62Da3JOu9H9EIgmqV7DoLG",
+    "year": "2000"
+  },
+  "00126": {
+    "title": "Robin Hood - König der Diebe ((Everything I Do) I Do It For You)",
+    "artist": "Bryan Adams",
+    "spotifyId": "1Eb90nmqTrxylKFhcUzW8P",
+    "year": "1991"
+  },
+  "00127": {
+    "title": "Psycho (Prelude)",
+    "artist": "Bernard Herrmann",
+    "spotifyId": "5L5fwo8nQjcFhSMTWpLOes",
+    "year": "1960"
+  },
+  "00128": {
+    "title": "Marry Poppins (Supercalifragilisticexpialidocious)",
+    "artist": "Julie Andrews, Dick Van Dyke",
+    "spotifyId": "4dBllWRbahO6aIC4pLGjHa",
+    "year": "1964"
+  },
+  "00129": {
+    "title": "Modern Family",
+    "artist": "Gabriel Mann",
+    "spotifyId": "3b8Dhzmkq4eTcGEr8NL3U1",
+    "year": "2009"
+  },
+  "00130": {
+    "title": "Jäger des verlorenen Schatzes (Indiana Jones)",
+    "artist": "John Williams",
+    "spotifyId": "5QMytOF6piEYwZDCHbjxTf",
+    "year": "1981"
+  },
+  "00131": {
+    "title": "Die Sopranos (Woke Up This Morning)",
+    "artist": "Alabama 3",
+    "spotifyId": "3TjlENVEU3a0s6s8BXyobq",
+    "year": "1999"
+  },
+  "00132": {
+    "title": "West Side Story (America)",
+    "artist": "Leonard Bernstein",
+    "spotifyId": "1RZ6jzlPeEaDeKYe7IJ792",
+    "year": "1961"
+  },
+  "00133": {
+    "title": "Die Eiskönigin - Völlig unverfroren (Let It Go)",
+    "artist": "Demi Lovato",
+    "spotifyId": "4cbJwuAEbaodP4InQDfAmW",
+    "year": "2013"
+  },
+  "00134": {
+    "title": "Der Rosarote Panther",
+    "artist": "Henry Mancini",
+    "spotifyId": "0juPSJLFnLFim7BK6VzTes",
+    "year": "1963"
+  },
+  "00135": {
+    "title": "Das Dschungelbuch (The Bare Necessities)",
+    "artist": "Phil Harris, Bruce Reitherman",
+    "spotifyId": "7h5crXBSY5SSpXRIlklv74",
+    "year": "1967"
+  },
+  "00136": {
+    "title": "Barbie (I'm Just Ken)",
+    "artist": "Ryan Gosling",
+    "spotifyId": "3zXIvb4nZ3cTdT8CsbTy3U",
+    "year": "2023"
+  },
+  "00137": {
+    "title": "Bram Stoker's Dracula (Love Song for a Vampire)",
+    "artist": "Annie Lennox",
+    "spotifyId": "3ik79qXV15D3ae33uveasw",
+    "year": "1992"
+  },
+  "00138": {
+    "title": "Knight Rider",
+    "artist": "Stu Phillips",
+    "spotifyId": "2R2gMe3zb9BgCdT2PZh1s3",
+    "year": "1982"
+  },
+  "00139": {
+    "title": "Die Monster AG",
+    "artist": "Randy Newman",
+    "spotifyId": "5e0O7MjhNHq9G67qDFM8nR",
+    "year": "2001"
+  },
+  "00140": {
+    "title": "Django Unchained (Django)",
+    "artist": "Luis Bacalov, Rocky Roberts",
+    "spotifyId": "008wXvCVu8W8vCbq5VQDlC",
+    "year": "2012"
+  },
+  "00141": {
+    "title": "Emily in Paris (Mon Soleil)",
+    "artist": "Ashley Park",
+    "spotifyId": "3jJ9djWzDlQnqDd7vTZs9K",
+    "year": "2020"
+  },
+  "00142": {
+    "title": "Rocky (Gonna Fly Now)",
+    "artist": "Bill Conti",
+    "spotifyId": "6C2PfemHQul77DVpnvuAIs",
+    "year": "1976"
+  },
+  "00143": {
+    "title": "The Last of Us",
+    "artist": "Gustavo Santaolalla",
+    "spotifyId": "285ieonEuLkll3zknYK2TY",
+    "year": "2023"
+  },
+  "00144": {
+    "title": "Die Muppet Show (Mah Na Mah Na)",
+    "artist": "The Snowths",
+    "spotifyId": "4rVrHxLGV2iSN4nJtI9hKh",
+    "year": "1976"
+  },
+  "00145": {
+    "title": "Star Trek",
+    "artist": "Jerry Goldsmith",
+    "spotifyId": "43B5NwirruWiXQi5V1LaOd",
+    "year": "1979"
+  },
+  "00146": {
+    "title": "Bridget Jones - Schokolade zum Frühstück (Out Of Reach)",
+    "artist": "GABRIELLE",
+    "spotifyId": "0g9ne3xgPwtCj4W7QR7RFY",
+    "year": "2001"
+  },
+  "00147": {
+    "title": "Ghostbusters",
+    "artist": "Ray Parker Jr.",
+    "spotifyId": "0phGofl3ppS5Itk1zM9eKa",
+    "year": "1984"
+  },
+  "00148": {
+    "title": "Vom Winde verweht",
+    "artist": "Max Steiner",
+    "spotifyId": "6kucJsz2GR6oN8glzqGdTh",
+    "year": "1939"
+  },
+  "00149": {
+    "title": "Starsky & Hutch (Gotcha)",
+    "artist": "Tom Scott",
+    "spotifyId": "6TgUmUgpfE2b6g9HcgHulQ",
+    "year": "1975"
+  },
+  "00150": {
+    "title": "Was gibt's Neues, Pussy? (What's New Pussycat?)",
+    "artist": "Tom Jones",
+    "spotifyId": "4HjwGX3pJKJTeOSDpT6GCo",
+    "year": "1965"
+  },
+  "00151": {
+    "title": "Die Waffen der Frauen (Let The River Run)",
+    "artist": "Carly Simon",
+    "spotifyId": "2R7Bg8CbvJDmfiSRZ0qgOh",
+    "year": "1988"
+  },
+  "00152": {
+    "title": "Mord ist ihr Hobby",
+    "artist": "John Addison",
+    "spotifyId": "291EXOi90ZIFIlQWcaC7vV",
+    "year": "1984"
+  },
+  "00153": {
+    "title": "Spirit - Der wilde Mustang (Here I Am)",
+    "artist": "Bryan Adams",
+    "spotifyId": "0gJBPDy458wPeWGHei3TvO",
+    "year": "2002"
+  },
+  "00154": {
+    "title": "High School Musical (We're All In This Together)",
+    "artist": "High School Musical Cast",
+    "spotifyId": "5t5LFepMdws4nudg1EiWdd",
+    "year": "2006"
+  }
+}
