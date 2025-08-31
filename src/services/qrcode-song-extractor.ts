@@ -1,13 +1,13 @@
-import { DEFAULT_PLAYLISTS_META_DATA } from "../config";
+import { DEFAULT_PLAYLISTS_META_DATA } from "../data/config";
 
-type PlaylistItem = {
+type PlaylistTrack = {
   title: string;
   artist: string;
   spotifyId: string;
   year: string;
 };
 type CardNumber = string;
-type Playlist = Record<CardNumber, PlaylistItem>;
+export type PlaylistTracksMap = Record<CardNumber, PlaylistTrack>;
 
 type CountryCode = string;
 type SKU = string;
@@ -21,13 +21,13 @@ const HISTER_SKU_URL_REGEX =
 const HISTER_COUNTRY_URL_REGEX =
   /^www\.hitstergame\.com\/(?<country_code>[a-z]{2})\/(?<card_number>\d+)$/;
 
-const loadPlaylist = (() => {
-  const playlistCache: Record<HitsterPlaylistKey, Playlist> = {};
+export const loadHitsterPlaylist = (() => {
+  const playlistCache: Record<HitsterPlaylistKey, PlaylistTracksMap> = {};
 
   return async (
     countryCode: string,
     sku: string | null
-  ): Promise<Playlist | null> => {
+  ): Promise<PlaylistTracksMap | null> => {
     const key: HitsterPlaylistKey =
       `${countryCode}` + (sku !== null ? `-${sku}` : "");
     if (playlistCache[key]) {
@@ -41,7 +41,7 @@ const loadPlaylist = (() => {
         console.error(`Could not fetch playlist JSON for SKU ${sku}`);
         return null;
       }
-      const playlist: Playlist = await res.json();
+      const playlist: PlaylistTracksMap = await res.json();
       playlistCache[key] = playlist;
       return playlist;
     } catch (err) {
@@ -125,7 +125,7 @@ export async function extractSpotifyUri(
       };
     }
 
-    const playlist = await loadPlaylist(country_code, sku);
+    const playlist = await loadHitsterPlaylist(country_code, sku);
     if (!playlist) {
       return {
         status: "error",

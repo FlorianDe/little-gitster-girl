@@ -1,5 +1,7 @@
 const en = {
     yourPlaylists: ', your playlists:',
+    prebuiltPlaylistsTitle: 'Prebuilt playlists:',
+    prebuilt: "Prebuilt",
     language: 'Language',
     thisLang: 'English',
     welcome: 'Welcome',
@@ -49,6 +51,8 @@ export type SupportedLanguage = 'de' | 'en';
 
 const de: Translation = {
     yourPlaylists: ', deine Playlisten:',
+    prebuiltPlaylistsTitle: 'Vorgefertigte Playlisten:',
+    prebuilt: "Vorgefertigte",
     language: 'Sprache',
     thisLang: 'Deutsch',
     welcome: 'Willkommen',
@@ -71,7 +75,7 @@ const de: Translation = {
     pageNotFoundJokeMessage: 'Vielleicht hat die Musik eine Pause eingelegt? Lass uns dorthin zurückkehren, wo die Klänge spielen.',
     goBackToHome: 'Zurück zur Startseite',
     cancelSelection: 'Auswahl abbrechen',
-    selectPlaylists: 'Playlists auswählen',
+    selectPlaylists: 'Playlisten auswählen',
     generate: 'Generieren',
     playGame: 'Spiel starten',
     generateCodes: 'Codes generieren',
