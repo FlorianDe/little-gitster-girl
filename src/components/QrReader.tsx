@@ -4,6 +4,7 @@ import './QrReader.css';
 
 import QrScanner from 'qr-scanner';
 
+export type ScanResult = QrScanner.ScanResult;
 /*
 * MonkeyPatch getContext method to add willReadFrequently:true to the options
 */
@@ -97,6 +98,7 @@ const QrReader = forwardRef<QrReaderRef, QrReaderProps>(({onScanSuccess}, ref) =
                 // overlay: qrBoxEl?.current || undefined,
                 returnDetailedScanResult: true,
             });
+            scanner.current.setInversionMode('both');
         }
 
         return () => {
