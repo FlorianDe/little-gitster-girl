@@ -15,7 +15,7 @@
   "generate-certs": "mkdir -p generated/certs && echo \"[req]\\ndistinguished_name=req\\n[ext]\\nsubjectAltName=DNS:localhost,DNS:Florian-Air.fritz.box\" > generated/certs/san.cnf && openssl genpkey -algorithm RSA -out generated/certs/private.key -pkeyopt rsa_keygen_bits:2048 && openssl req -new -key generated/certs/private.key -out generated/certs/csr.csr -subj \"/CN=NAME-Air.fritz.box\" -config generated/certs/san.cnf && openssl x509 -req -in generated/certs/csr.csr -signkey generated/certs/private.key -out generated/certs/certificate.crt -days 365 -extfile generated/certs/san.cnf -extensions ext && rm generated/certs/san.cnf generated/certs/csr.csr"
   },
   "dependencies": {
-    "@sentry/react": "^9.0.0",
+    "@sentry/react": "^10.9.0",
     "@spotify/web-api-ts-sdk": "^1.2.0",
     "@types/subset-font": "^2.3.0",
     "jspdf": "3.0.2",
