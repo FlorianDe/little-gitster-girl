@@ -145,6 +145,10 @@
   max-height: calc(var(--line-height) * var(--max-lines));
 }
 
+.playlist-item.expanded .playlist-name {
+  -webkit-line-clamp: unset;
+  white-space: normal;
+  max-height: unset;
 }
 
 .lock-icon {
