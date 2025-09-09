@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useTranslation } from '../i18n';
 import QrCodePdfIcon from './icons/QrCodesDownloadIcon';
 import QuestionMarkIcon from './icons/QuestionMarkIcon';
@@ -36,11 +36,21 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
 }) => {
   const { t } = useTranslation();
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
+  const [expandedRow, setExpandedRow] = useState<string | null>(null);
+  const lastTap = useRef<number>(0);
   const [isSelectionMode, setSelectionMode] = useState(false);
 
   const toggleSelectionMode = () => {
     if (isSelectionMode) setSelectedItems([]);
     setSelectionMode(!isSelectionMode);
+  };
+
+  const handleTap = (id: string) => {
+    const now = Date.now();
+    if (now - lastTap.current < 300) {
+      setExpandedRow((prev) => (prev === id ? null : id));
+    }
+    lastTap.current = now;
   };
 
   const toggleSelectItem = (id: string) => {
@@ -71,13 +81,20 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
         {Object.entries(playlists).map(([id, item]) => (
           <li
             key={id}
-            className={`playlist-item ${selectedItems.includes(id) ? 'selected' : ''} ${
-              isSelectionMode ? 'hover-enabled' : ''
-            }`}
+            className={`playlist-item ${expandedRow === id ? 'expanded' : ''} ${
+              selectedItems.includes(id) ? 'selected' : ''
+            } ${isSelectionMode ? 'hover-enabled' : ''}`}
             onClick={() => isSelectionMode && toggleSelectItem(id)}
+            onTouchEnd={() => handleTap(id)}
           >
             {isSelectionMode && (
-              <div className="checkbox">{selectedItems.includes(id) ? '☑' : '☐'}</div>
+              <input
+                type="checkbox"
+                className="checkbox"
+                checked={selectedItems.includes(id)}
+                // onChange={() => toggleSelectItem(id)}
+              />
+              // <div className="checkbox">{selectedItems.includes(id) ? '☑' : '☐'}</div>
             )}
 
             {item?.playlistImage?.url ? (
@@ -127,7 +144,8 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
             onClick={generateSelected}
             disabled={isGenerating}
           >
-            {t('generateQrCodesFor')} {selectedItems.length} {t('playlists')}
+            {t('generateQrCodesFor')} {selectedItems.length}{' '}
+            {selectedItems.length > 1 ? t('playlists') : t('playlist')}
           </button>
         </div>
       )}

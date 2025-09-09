@@ -17,6 +17,7 @@
 }
 
 .select-button {
+  font-size: 1em;
   align-self: self-start;
   background: var(--button-color);
   color: var(--button-text-color);
@@ -57,12 +58,55 @@
   transition: background 0.2s ease;
 }
 
-.playlist-item.hover-enabled:hover {
-  background: var(--card-background-color-hover);
+@media (hover: hover) and (pointer: fine) {
+  .playlist-item.hover-enabled:hover {
+    background: var(--card-background-color-hover);
+  }
 }
 
 .playlist-item.selected {
   background: var(--card-background-color-selected);
+}
+
+.checkbox {
+  --cb-size: 1.4rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  min-width: var(--cb-size);
+  max-width: var(--cb-size);
+  width: var(--cb-size);
+  height: var(--cb-size);
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--background-color);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.checkbox:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .playlist-image {
@@ -72,7 +116,6 @@
   background-color: rgba(0, 0, 0, 0.1);
   object-fit: cover;
   border-radius: 6px;
-  margin-right: 0.5rem;
   border-color: var(--card-background-color-border);
   border-style: solid;
   border-width: 2px;
@@ -82,14 +125,30 @@
   flex: 1 1 auto;
   min-width: 0;
   overflow: hidden;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .playlist-name {
+  --max-lines: 2;
+  --line-height: 1.4em;
   font-weight: 500;
   font-size: 1rem;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--max-lines);
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: normal;
+
+  line-height: var(--line-height);
+  max-height: calc(var(--line-height) * var(--max-lines));
+}
+
+.playlist-item.expanded .playlist-name {
+  -webkit-line-clamp: unset;
+  white-space: normal;
+  max-height: unset;
 }
 
 .lock-icon {
@@ -107,37 +166,53 @@
   margin-left: auto;
 }
 
+@media (max-width: 600px) {
+  .playlist-item {
+  }
+
+  .playlist-image {
+  }
+}
+
 .floating-actions {
   position: fixed;
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  border-radius: 10px 10px 0px 0px;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  padding-bottom: 20px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
   max-width: 600px;
-  margin: 0 auto;
-  z-index: 1000;
+
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -4px 12px var(--shadow-color);
+  z-index: 20;
 }
 
 .reset-button,
 .generate-all-button {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
   border: none;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
   color: var(--button-text-color);
   background: var(--button-color);
-  transition: background-color 0.3s ease;
 }
 
 .reset-button:hover:not(:disabled),
 .generate-all-button:hover:not(:disabled) {
   background: var(--button-color-hover);
+  transform: translateY(-2px); /* subtle lift */
 }
 
 .reset-button:disabled,
@@ -147,30 +222,15 @@
 }
 
 @media (max-width: 600px) {
-  .playlist-item {
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-  }
-
-  .playlist-image {
-    /* margin-bottom: 10px; */
-  }
-
   .floating-actions {
-    padding-bottom: 80px; /* leave space for mobile nav if needed */
-    /* flex-direction: column; */
-    /* align-items: stretch; */
+    flex-direction: column; /* stack buttons vertically */
+    align-items: stretch;
+    gap: 0.5rem;
   }
-}
 
-.checkbox {
-  margin-left: 0.5rem;
-  margin-right: 1rem;
-  width: 1.4em;
-  height: 1.4em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  user-select: none;
+  .reset-button,
+  .generate-all-button {
+    flex: none; /* full width, but don't stretch unevenly */
+    width: 100%;
+  }
 }
