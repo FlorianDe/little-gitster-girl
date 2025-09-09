@@ -127,7 +127,8 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
             onClick={generateSelected}
             disabled={isGenerating}
           >
-            {t('generateQrCodesFor')} {selectedItems.length} {t('playlists')}
+            {t('generateQrCodesFor')} {selectedItems.length}{' '}
+            {selectedItems.length > 1 ? t('playlists') : t('playlist')}
           </button>
         </div>
       )}
