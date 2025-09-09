@@ -77,7 +77,13 @@ const PlaylistComponent: React.FC<PlaylistComponentProps> = ({
             onClick={() => isSelectionMode && toggleSelectItem(id)}
           >
             {isSelectionMode && (
-              <div className="checkbox">{selectedItems.includes(id) ? '☑' : '☐'}</div>
+              <input
+                type="checkbox"
+                className="checkbox"
+                checked={selectedItems.includes(id)}
+                // onChange={() => toggleSelectItem(id)}
+              />
+              // <div className="checkbox">{selectedItems.includes(id) ? '☑' : '☐'}</div>
             )}
 
             {item?.playlistImage?.url ? (
