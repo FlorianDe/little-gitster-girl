@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Navigate } from 'react-router-dom';
 
 import { useSpotifyAuth } from '../auth';
@@ -12,10 +12,16 @@ type ProtectedRouteProps = {
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, redirectPath = '/' }) => {
     const { isAuthenticated, isCheckingAuthentication } = useSpotifyAuth();
     const { showToast } = useToast();
+    const hasShownToast = useRef(false);
 
     useEffect(() => {
-        if (!isCheckingAuthentication && !isAuthenticated) {
+        if (
+            !isCheckingAuthentication && 
+            !isAuthenticated && 
+            !hasShownToast.current
+        ) {
             showToast('You need to be logged in to access this page.', 'error', 3000);
+            hasShownToast.current = true;
         }
     }, [isAuthenticated, isCheckingAuthentication, showToast]);
 
