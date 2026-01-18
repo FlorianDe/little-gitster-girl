@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  // @see: https://docs.renovatebot.com/presets-config/#configrecommended 
+  "extends": ["config:recommended"],
+  "baseBranches": ["main"],
+  "prConcurrentLimit": 2,
+  "packageRules": [
+    {
+      "description": "Group all production dependencies (minor + patch only)",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "production dependencies"
+    },
+    {
+      "description": "Disable major updates for production dependencies",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "description": "Group all dev dependencies (major + minor + patch)",
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "dev dependencies"
+    }
+  ]
+}
